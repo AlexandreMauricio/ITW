@@ -37,6 +37,7 @@
 
 .car-item{
   transition: transform 0.2s;
+  max-width: 18rem;
 }
 
 .car-item:hover{

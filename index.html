@@ -11,7 +11,7 @@
 
 <body>
     <audio id="musica" preload="auto" style="display:none;" autoplay loop>
-        <source src="media/music/Bandolero.mp3" type="audio/mp3">
+        <source src="media/music/dartacao.mp3" type="audio/mp3">
     </audio>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Fourth navbar example">
@@ -146,18 +146,7 @@
             </a>
         </div>
         <hr>
-        <div class="row mx-auto mt-2">
-            <div class="card border-primary m-1 mb-3 col-md-4 shadow-lg car-item" style="width: 18rem;">
-                <img src="media/image/alex_audi.jpg" class="card-img-top mt-1 img-fluid" alt="car-item">
-                <div class="card-body container-fluid">
-                    <h5 class="card-title">Audi A4 2009</h5>
-                    <p class="card-text">5<img src="media/image/star-fill.svg" alt="star"> 220000 km</p>
-                    <hr>
-                </div>
-                <div class="d-flex flex-row mb-3 justify-content-around">
-                    <h4>50€ / day</h4><a href="item.html?info=zcukfvciyutkxdciy6cik" class="btn btn-primary">More +</a>
-                </div>
-            </div>
+        <div id="cars" class="row mx-auto mt-2">
         </div>
         </div>
         <div class="offcanvas offcanvas-start" tabindex="-1" id="specificBrandCanvas"
@@ -232,6 +221,41 @@
     </footer>
 </body>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/cars.js"></script>
+<script>
+    window.onload = function () {
+
+        for (let i = cars.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [cars[i], cars[j]] = [cars[j], cars[i]];
+        }
+
+        rowsElement = document.getElementById("cars");
+        cars.forEach(vehicle => {
+                const vehicleDiv = document.createElement('div');
+                vehicleDiv.classList.add('card');
+                vehicleDiv.classList.add('border-primary');
+                vehicleDiv.classList.add('mb-3');
+                vehicleDiv.classList.add('col-md-4');
+                vehicleDiv.classList.add('shadow-lg');
+                vehicleDiv.classList.add('car-item');
+                vehicleDiv.classList.add('mx-auto');
+                vehicleDiv.innerHTML =
+                    `<img src="media/image/${vehicle.imageLocation}" class="card-img-top mt-1 img-fluid" alt="car-item">
+            <div class="card-body container-fluid">
+              <h5 class="card-title">${vehicle.brand} ${vehicle.model} ${vehicle.submodel} ${vehicle.year}</h5>
+              <p class="card-text">${vehicle.rating}<img src="media/image/star-fill.svg" alt="star"> ${vehicle.mileage} km</p>
+              <hr>
+            </div>
+            <div class="d-flex flex-row mb-3 justify-content-around">
+              <h4>${vehicle.price}€ / day</h4><a href="#" class="btn btn-primary">More +</a>
+            </div>`;
+            rowsElement.appendChild(vehicleDiv);    
+        });
+            
+
+    };
+</script>
 <script src="js/musica.js"></script>
 
 </html>
