@@ -11,7 +11,7 @@
 
 <body>
     <audio id="musica" preload="auto" style="display:none;" autoplay loop>
-        <source src="media/Bandolero.mp3" type="audio/mp3">
+        <source src="media/dartacao.mp3" type="audio/mp3">
     </audio>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
@@ -38,10 +38,10 @@
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown"
                                 aria-expanded="false">Autors</a>
                             <ul class="dropdown-menu" aria-labelledby="dropdown04">
-                                <li><a class="dropdown-item" href="#">All</a></li>
-                                <li><a class="dropdown-item" href="#">Alexandre</a></li>
-                                <li><a class="dropdown-item" href="#">João</a></li>
-                                <li><a class="dropdown-item" href="#">Manuel</a></li>
+                                <li><a class="dropdown-item" href="autores.html">All</a></li>
+                                <li><a class="dropdown-item" href="autores.html?autor=alex">Alexandre</a></li>
+                                <li><a class="dropdown-item" href="autores.html?autor=janecas">João</a></li>
+                                <li><a class="dropdown-item" href="autores.html?autor=manel">Manuel</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -129,62 +129,17 @@
             <div class="card col-md-auto m-1 shadow-lg car-item" style="width: 18rem;">
                 <img src="media/alex_audi.jpg" class="card-img-top img-thumbnail" alt="car-item">
                 <div class="card-body container-fluid">
-                    <h5 class="card-title">Audi A4</h5>
-                    <p class="card-text">Gasóleo</p>
-                    <p class="card-text">220000 km</p>
-                    <p class="card-text">2.0 TDI</p>
-                    <p class="card-text">143 cv</p>
-                    <div class="text-center"><a href="item.html?info=zcukfvciyutkxdciy6cik" class="btn btn-secondary mx-auto">More +</a></div>
-                </div>
-            </div><div class="card col-md-auto m-1 shadow-lg car-item" style="width: 18rem;">
-                <img src="media/alex_audi.jpg" class="card-img-top img-thumbnail" alt="car-item">
-                <div class="card-body container-fluid">
-                    <h5 class="card-title">Audi A4</h5>
-                    <p class="card-text">Gasóleo</p>
-                    <p class="card-text">220000 km</p>
-                    <p class="card-text">2.0 TDI</p>
-                    <p class="card-text">143 cv</p>
-                    <div class="text-center"><a href="#" class="btn btn-secondary mx-auto">More +</a></div>
-                </div>
-            </div><div class="card col-md-auto m-1 shadow-lg car-item" style="width: 18rem;">
-                <img src="media/alex_audi.jpg" class="card-img-top img-thumbnail" alt="car-item">
-                <div class="card-body container-fluid">
-                    <h5 class="card-title">Audi A4</h5>
-                    <p class="card-text">Gasóleo</p>
-                    <p class="card-text">220000 km</p>
-                    <p class="card-text">2.0 TDI</p>
-                    <p class="card-text">143 cv</p>
-                    <div class="text-center"><a href="#" class="btn btn-secondary mx-auto">More +</a></div>
-                </div>
-            </div><div class="card col-md-auto m-1 shadow-lg car-item" style="width: 18rem;">
-                <img src="media/alex_audi.jpg" class="card-img-top img-thumbnail" alt="car-item">
-                <div class="card-body container-fluid">
-                    <h5 class="card-title">Audi A4</h5>
-                    <p class="card-text">Gasóleo</p>
-                    <p class="card-text">220000 km</p>
-                    <p class="card-text">2.0 TDI</p>
-                    <p class="card-text">143 cv</p>
-                    <div class="text-center"><a href="#" class="btn btn-secondary mx-auto">More +</a></div>
-                </div>
-            </div><div class="card col-md-auto m-1 shadow-lg car-item" style="width: 18rem;">
-                <img src="media/alex_audi.jpg" class="card-img-top img-thumbnail" alt="car-item">
-                <div class="card-body container-fluid">
-                    <h5 class="card-title">Audi A4</h5>
-                    <p class="card-text">Gasóleo</p>
-                    <p class="card-text">220000 km</p>
-                    <p class="card-text">2.0 TDI</p>
-                    <p class="card-text">143 cv</p>
-                    <div class="text-center"><a href="#" class="btn btn-secondary mx-auto">More +</a></div>
-                </div>
-            </div><div class="card col-md-auto m-1 shadow-lg car-item" style="width: 18rem;">
-                <img src="media/alex_audi.jpg" class="card-img-top img-thumbnail" alt="car-item">
-                <div class="card-body container-fluid">
-                    <h5 class="card-title">Audi A4</h5>
-                    <p class="card-text">Gasóleo</p>
-                    <p class="card-text">220000 km</p>
-                    <p class="card-text">2.0 TDI</p>
-                    <p class="card-text">143 cv</p>
-                    <div class="text-center"><a href="#" class="btn btn-secondary mx-auto">More +</a></div>
+                    <div class="d-flex flex-row">
+                        <div><h5 class="card-title text-warning">Audi A4</h5>
+                            <p class="card-text">Gasóleo</p>
+                            <p class="card-text">220000 km</p>
+                            <p class="card-text">2.0 TDI</p>
+                            <p class="card-text">143 cv</p></div>
+                        <div class="mx-auto text-primary">
+                            <h4>704€ / mês</h4>
+                        </div>
+                    </div>
+                    <div class="text-center mt-2"><a href="item.html?info=zcukfvciyutkxdciy6cik" class="btn btn-secondary mx-auto">More +</a></div>
                 </div>
             </div>
         </div>
