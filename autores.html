@@ -32,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="navbarsExample04">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contactos.html">Contacts</a>
@@ -82,6 +82,67 @@
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item active">Authors</li>
           </ol>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="alexHeading">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#alexAuthor" aria-expanded="true" aria-controls="collapseOne">
+                  Alexandre Maurício
+                </button>
+              </h2>
+              <div id="alexAuthor" class="accordion-collapse collapse show" aria-labelledby="alexHeading" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="row">
+                        <img src="media/image/alex_author.jpg" class="col-lg-3 row-span-2 author-photo" alt="Alex">
+                        <div class="col-lg-9">
+                            <h3 class="text-center text-success">Alexandre Maurício</h3>
+                            <ul>
+                                <li>22 years (Warranty expired)</li>
+                                <li>Lardosa - Castelo Branco</li>
+                                <li>Student number: 20191744</li>
+                                <li>Third year</li>
+                                <li>Slytherin</li>
+                                <li>Application Developer since Jun/2022</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <figure class="text-center">
+                            <blockquote class="blockquote">
+                              <p class="mb-0">Dude, you're embarrassing me in front of the wizards.
+                            </blockquote>
+                            <figcaption class="blockquote-footer">
+                              Tony Stark in <cite title="Source Title">Avengers Infinity War</cite>
+                            </figcaption>
+                          </figure>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Manuel Rolo
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  João Dias
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
     </main>
     <footer>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">

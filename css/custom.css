@@ -14,7 +14,7 @@
   }
   
   /* Declare heights because of positioning of img element */
-  .carousel-item, .banner {
+  .carousel-item {
     height: 32rem;
   }
   .carousel-item > img {
@@ -46,6 +46,11 @@
 .car-item:hover{
   transform: scale(1.05);
 }
+
+.row-span-2 {
+  grid-row-end: span 2;
+}
+
 
 
 @media (min-width: 768px) {
