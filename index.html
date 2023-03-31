@@ -11,7 +11,7 @@
 
 <body>
     <audio id="musica" preload="auto" style="display:none;" autoplay loop>
-        <source src="media/music/dartacao.mp3" type="audio/mp3">
+        <source src="media/music/Hello_There.mp3" type="audio/mp3">
     </audio>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Fourth navbar example">
@@ -248,7 +248,7 @@
               <hr>
             </div>
             <div class="d-flex flex-row mb-3 justify-content-around">
-              <h4>${vehicle.price}€ / day</h4><a href="#" class="btn btn-primary">More +</a>
+              <h4>${vehicle.price}€ / day</h4><a href="item.html?brand=${vehicle.brand}&model=${vehicle.model}&submodel=${vehicle.submodel}" class="btn btn-primary">More +</a>
             </div>`;
             rowsElement.appendChild(vehicleDiv);    
         });
@@ -257,5 +257,4 @@
     };
 </script>
 <script src="js/musica.js"></script>
-
 </html>
