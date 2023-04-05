@@ -123,7 +123,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                     <button id="manelButton" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        data-bs-target="#manelAuthor" aria-expanded="false" aria-controls="collapseTwo">
                         Manuel Rolo
                     </button>
                 </h2>
@@ -131,7 +131,8 @@
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="row">
-                            <img src="media/image/manel_author.jpg" class="col-lg-3 row-span-2 author-photo" alt="Manel">
+                            <img src="media/image/manel_author.jpg" class="col-lg-3 row-span-2 author-photo"
+                                alt="Manel">
                             <div class="col-lg-9">
                                 <h3 class="text-center text-success">Manuel Rolo</h3>
                                 <ul>
@@ -165,34 +166,35 @@
                     </button>
                 </h2>
                 <div id="janecaAuthor" class="accordion-collapse collapse show" aria-labelledby="joaoHeading"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <div class="row">
-                        <img src="media/image/joao_author.jpg" class="col-lg-3 row-span-2 author-photo" alt="Joao">
-                        <div class="col-lg-9">
-                            <h3 class="text-center text-success">João Dias</h3>
-                            <ul>
-                                <li>21 years (feels like 84)</li>
-                                <li>Figueiró dos Vinhos - Leiria</li>
-                                <li>Student number: 20191749</li>
-                                <li>Third year</li>
-                                <li>Addicted Gamer</li>
-                                <li>Sometimes smart, sometimes not so smart</li>
-                            </ul>
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <img src="media/image/joao_author.jpg" class="col-lg-3 row-span-2 author-photo" alt="Joao">
+                            <div class="col-lg-9">
+                                <h3 class="text-center text-success">João Dias</h3>
+                                <ul>
+                                    <li>21 years (feels like 84)</li>
+                                    <li>Figueiró dos Vinhos - Leiria</li>
+                                    <li>Student number: 20191749</li>
+                                    <li>Third year</li>
+                                    <li>Addicted Gamer</li>
+                                    <li>Sometimes smart, sometimes not so smart</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <figure class="text-center">
-                            <blockquote class="blockquote">
-                                <p class="mb-0"> Me think, why waste time say lot word when few word do trick  </blockquote>
-                            <figcaption class="blockquote-footer">
-                                Kevin Malone in <cite title="Source Title">The Office</cite>
-                            </figcaption>
-                        </figure>
+                        <div class="row">
+                            <figure class="text-center">
+                                <blockquote class="blockquote">
+                                    <p class="mb-0"> Me think, why waste time say lot word when few word do trick
+                                </blockquote>
+                                <figcaption class="blockquote-footer">
+                                    Kevin Malone in <cite title="Source Title">The Office</cite>
+                                </figcaption>
+                            </figure>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </main>
     <footer>
@@ -244,12 +246,19 @@
     // If the author parameter exists in the URL, simulate a click on the corresponding button
     if (author) {
         if (author.toLowerCase() === 'manel') {
-            manelButton.click();
-        } else if (author.toLowerCase() === 'janecas') {
+            alexButton.click();
             janecaButton.click();
+        } else if (author.toLowerCase() === 'janecas') {
+            manelButton.click();
+            alexButton.click();
+        } else if (author.toLowerCase() === 'alex') {
+            janecaButton.click();
+            manelButton.click();
         }
     } else {
         alexButton.click();
+        janecaButton.click();
+        manelButton.click();
     }
 </script>
 
