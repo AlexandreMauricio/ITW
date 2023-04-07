@@ -49,10 +49,10 @@
           <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contactos.html" class="active"
+                <a class="nav-link active" href="contactos.html"
                   >Contacts</a
                 >
               </li>
@@ -127,94 +127,97 @@
         </div>
       </nav>
     </header>
-    <div class="container-md">
-      <div class="row">
-        <div class="col">
-          <label for="formulario">
-            <i
-              >(+)351 960000000 <br />
-              Contact Us
-            </i>
-          </label>
-          <form id="formulario" class="was-validated">
-            <div class="row">
-              <div class="col-md-5 w-75 mb-3">
-                <input
-                  type="text"
-                  class="form-control p-2"
-                  id="inputName"
-                  placeholder="Name"
-                  pattern="[A-Za-z]"
-                  required
-                />
-                <div class="valid-feedback">You're doing great!</div>
-                <div class="invalid-feedback">Please validate your name</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-5 w-75 mb-3">
-                <input
-                  type="email"
-                  class="form-control p-2"
-                  id="inputEmail"
-                  placeholder="Email"
-                  required
-                />
-                <div class="valid-feedback">You're doing great!</div>
-                <div class="invalid-feedback">Please validate your email</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-5 w-75 mb-3">
-                <input
-                  type="tel"
-                  class="form-control p-2"
-                  id="inputPhone"
-                  placeholder="Phone Number"
-                  pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
-                  required
-                />
-                <div class="valid-feedback">You're doing great!</div>
-                <div class="invalid-feedback">
-                  Please validate your number (Format: 960000000)
+    <main class="p-5 mb-5">
+      <div class="container-md">
+        <div class="row">
+          <div class="col">
+            <label for="formulario">
+              <i
+                >(+)351 960000000 <br />
+                Contact Us
+              </i>
+            </label>
+            <form id="formulario" class="needs-validation" novalidate>
+              <div class="row">
+                <div class="col-md-5 w-75 mb-3">
+                  <input
+                    type="text"
+                    class="form-control p-2"
+                    id="inputName"
+                    placeholder="Name"
+                    pattern="[A-Za-z]{1,100}"
+                    required
+                  />
+                  <div class="valid-feedback">You're doing great!</div>
+                  <div class="invalid-feedback">Please validate your name</div>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-md-5 w-75 mb-3">
-                <textarea
-                  class="form-control p-2"
-                  id="messageArea"
-                  rows="10"
-                  placeholder="Write your message..."
-                  required
-                ></textarea>
-                <div class="valid-feedback">You're doing great!</div>
-                <div class="invalid-feedback">Please input your message</div>
+              <div class="row">
+                <div class="col-md-5 w-75 mb-3">
+                  <input
+                    type="email"
+                    class="form-control p-2"
+                    id="inputEmail"
+                    placeholder="Email"
+                    required
+                  />
+                  <div class="valid-feedback">You're doing great!</div>
+                  <div class="invalid-feedback">Please validate your email</div>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-md-5 w-75 mb-3">
-                <button type="submit" class="btn btn-dark p-2 w-100">
-                  Submit
-                </button>
+              <div class="row">
+                <div class="col-md-5 w-75 mb-3">
+                  <input
+                    type="tel"
+                    class="form-control p-2"
+                    id="inputPhone"
+                    maxlength="9"
+                    placeholder="Phone Number"
+                    pattern="[0-9]{9}"
+                    required
+                  />
+                  <div class="valid-feedback">You're doing great!</div>
+                  <div class="invalid-feedback">
+                    Please validate your number (Format: 960000000)
+                  </div>
+                </div>
               </div>
-            </div>
-          </form>
-        </div>
-        <div class="col">
+              <div class="row">
+                <div class="col-md-5 w-75 mb-3">
+                  <textarea
+                    class="form-control p-2"
+                    id="messageArea"
+                    rows="10"
+                    placeholder="Write your message..."
+                    required
+                  ></textarea>
+                  <div class="valid-feedback">You're doing great!</div>
+                  <div class="invalid-feedback">Please input your message</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-5 w-75 mb-3">
+                  <button type="submit" class="btn btn-dark p-2 w-100">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1424.676942466887!2d-7.519302841868197!3d39.810328594860074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3d5fdc4ed6146d%3A0xdfc5b27cbc42bbbb!2sDream%20on%20Wheels%20Detalhe%20Autom%C3%B3vel!5e1!3m2!1sen!2snl!4v1680904062887!5m2!1sen!2snl"
               allowfullscreen=""
               width="100%"
               height="100%"
-              style="border:0;"
+              style="border: 0"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
     <footer>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
         <div class="container-fluid">
@@ -274,4 +277,28 @@
   </body>
   <script src="js/musica.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      "use strict";
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll(".needs-validation");
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener(
+          "submit",
+          function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    })();
+  </script>
 </html>
