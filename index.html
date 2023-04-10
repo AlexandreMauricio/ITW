@@ -241,14 +241,14 @@
                 vehicleDiv.classList.add('car-item');
                 vehicleDiv.classList.add('mx-auto');
                 vehicleDiv.innerHTML =
-                    `<img src="media/image/${vehicle.imageLocation}" class="card-img-top mt-1 img-fluid" alt="car-item">
+                    `<img src="media/image/${vehicle.imageLocation[0]}" class="card-img-top mt-1 img-fluid" alt="car-item">
             <div class="card-body container-fluid">
               <h5 class="card-title">${vehicle.brand} ${vehicle.model} ${vehicle.submodel} ${vehicle.year}</h5>
               <p class="card-text">${vehicle.rating}<img src="media/image/star-fill.svg" alt="star"> ${vehicle.mileage} km</p>
               <hr>
             </div>
             <div class="d-flex flex-row mb-3 justify-content-around">
-              <h4>${vehicle.price}€ / day</h4><a href="item.html?brand=${vehicle.brand}&model=${vehicle.model}&submodel=${vehicle.submodel}" class="btn btn-primary">More +</a>
+              <h4>${vehicle.price}€ / day</h4><a href="item.html?id=${vehicle.id}" class="btn btn-primary">More +</a>
             </div>`;
             rowsElement.appendChild(vehicleDiv);    
         });

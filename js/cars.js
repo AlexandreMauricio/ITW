@@ -1,4 +1,5 @@
 var cars = [{
+        id: 0,
         type: 'car',
         brand: 'Audi',
         model: 'A4',
@@ -10,8 +11,13 @@ var cars = [{
         rating: 4.7,
         mileage: 220000,
         price: 70,
-        imageLocation: 'alex_audi.jpg'
+        imageLocation: ['alex_audi.jpg',"",""],
+        aspects:['Luxury and Comfort','Performance and Power','Sleek and Stylish'],
+        description:["The Audi A4 B8 2009 offers a premium driving experience with its leather interior, spacious cabin, and advanced technology features.",
+       'With a 3.2-liter V6 engine delivering 265 horsepower, the Audi A4 B8 2009 provides impressive acceleration and a thrilling driving experience.',
+    'The Audi A4 B8 2009 features a modern and refined design, with sleek lines and a striking grille that make it stand out on the road.']
     }, {
+        id: 1,
         type: 'car',
         brand: 'Toyota',
         model: 'Corolla',
@@ -23,8 +29,13 @@ var cars = [{
         rating: 4.5,
         mileage: 10000,
         price: 28,
-        imageLocation: 'Toyota-Corolla.jpg'
+        imageLocation: ['Toyota-Corolla.jpg',"Toyota-Corolla3.jpg","Toyota-Corolla2.jpg"],
+        aspects:["Sporty and Efficient","Tech-Savvy and Comfortable","Reliable and Affordable"],
+        description:["The Toyota Corolla SE 2021 boasts a sporty design and a fuel-efficient engine, making it a perfect choice for those who want style and efficiency.",
+        "Equipped with advanced technology features and a spacious cabin, the Toyota Corolla SE offers a comfortable and connected driving experience.",
+        "Reliable and Affordable: Known for its reliability and affordability, the Toyota Corolla SE 2021 is a practical choice for anyone looking for a dependable car that won't break the bank."]
     }, {
+        id: 2,
         type: 'truck',
         brand: 'Ford',
         model: 'F-150',
@@ -36,8 +47,13 @@ var cars = [{
         rating: 4.9,
         mileage: 5000,
         price: 45,
-        imageLocation: 'Ford-F-150.jpg'
+        imageLocation: ['Ford-F-150.jpg',"",""],
+        aspects:["Powerful and Versatile","Comfortable and Spacious","Safe and Efficient"],
+        description:["The Ford F-150 XL 2022 boasts a powerful engine and versatile capabilities, making it an excellent choice for work or play.",
+        "Equipped with a roomy interior and comfortable seating, the Ford F-150 XL 2022 provides a comfortable and enjoyable ride for both drivers and passengers.",
+        "With advanced safety features and impressive fuel efficiency, the Ford F-150 XL 2022 offers both peace of mind and cost savings for drivers."]
     }, {
+        id: 3,
         type: 'suv',
         brand: 'Honda',
         model: 'CR-V',
@@ -49,8 +65,13 @@ var cars = [{
         rating: 4.7,
         mileage: 15000,
         price: 32,
-        imageLocation: 'Honda-CR-V.jpg'
+        imageLocation: ['Honda-CR-V.jpg','',''],
+        aspects:["Versatile and Practical","Advanced and Connected", "Efficient and Fun"],
+        description:["The Honda CR-V EX 2020 is a versatile and practical crossover SUV that offers plenty of cargo space and a comfortable ride, making it perfect for families and adventurers alike.",
+        "Equipped with advanced safety features and technology, the Honda CR-V EX 2020 provides a connected and secure driving experience. With features such as Honda Sensing and a touchscreen display audio system, drivers can enjoy peace of mind and convenience on the road.",
+        "With its fuel-efficient engine and responsive handling, the Honda CR-V EX 2020 offers a fun and agile driving experience. Whether cruising around town or hitting the open road, the CR-V EX 2020 provides both efficiency and enjoyment."]
     }, {
+        id: 4,
         type: 'motorcycle',
         brand: 'Harley-Davidson',
         model: 'Softail',
@@ -62,9 +83,14 @@ var cars = [{
         rating: 4.5,
         mileage: 5000,
         price: 20,
-        imageLocation: 'Harley-Davidson-Softail.jpg'
+        imageLocation: ['Harley-Davidson-Softail.jpg','',''],
+        aspects:['Classic Style and Comfort','Powerful and Responsive','Customizable and Iconic'],
+        description:['The Harley-Davidson Softail Heritage Classic 2021 combines classic Harley style with modern comfort features, providing riders with a stylish and comfortable ride.',
+        'Featuring a powerful V-twin engine and responsive handling, the Harley-Davidson Softail Heritage Classic 2021 delivers a thrilling ride with excellent performance.',
+        'With a range of customizable options and its iconic Harley-Davidson design, the Softail Heritage Classic 2021 allows riders to make a statement on the road with a personalized motorcycle.']
     },
     {
+        id: 5,
         type: 'car',
         brand: 'BMW',
         model: '3 Series',
@@ -76,9 +102,14 @@ var cars = [{
         rating: 4.9,
         mileage: 8000,
         price: 55,
-        imageLocation: 'BMW-3-Series.jpg'
+        imageLocation: ['BMW-3-Series.jpg','',''],
+        aspects:['Dynamic and Sporty','Luxurious and Comfortable','Efficient and Eco-Friendly'],
+        description:['The BMW 3 Series 330i 2022 offers a thrilling driving experience with its powerful engine, responsive handling, and sporty design.',
+        'With its premium materials, advanced technology, and spacious interior, the BMW 3 Series 330i 2022 provides a luxurious and comfortable ride for drivers and passengers alike.',
+        'Equipped with a fuel-efficient engine and advanced hybrid technology, the BMW 3 Series 330i 2022 is an eco-friendly choice for drivers who want to reduce their carbon footprint without sacrificing performance.']
     },
     {
+        id: 6,
         type: 'truck',
         brand: 'Chevrolet',
         model: 'Silverado',
@@ -90,9 +121,14 @@ var cars = [{
         rating: 4.7,
         mileage: 12000,
         price: 48,
-        imageLocation: 'Chevrolet-Silverado.jpg'
+        imageLocation: ['Chevrolet-Silverado.jpg','',''],
+        aspects:['Powerful and Versatile','Comfortable and Spacious','Modern and Stylish'],
+        description:['The Chevrolet Silverado 1500 is built to handle tough jobs with its powerful engine and versatile cargo bed, making it a top choice for truck enthusiasts and professionals alike.',
+        'Featuring a roomy cabin and advanced technology, the Chevrolet Silverado 1500 provides a comfortable and convenient ride for drivers and passengers, whether on short commutes or long road trips.',
+        'With its sleek and modern design, the Chevrolet Silverado 1500 is a stylish and eye-catching truck that turns heads on the road, while still delivering impressive performance and functionality.']
     },
     {
+        id: 7,
         type: 'suv',
         brand: 'Ford',
         model: 'Explorer',
@@ -104,9 +140,14 @@ var cars = [{
         rating: 4.5,
         mileage: 20000,
         price: 50,
-        imageLocation: 'Ford-Explorer.jpg'
+        imageLocation: ['Ford-Explorer.jpg','',''],
+        aspects:['Powerful and Athletic','Spacious and Versatile','Luxurious and High-Tech'],
+        description:['With a turbocharged V6 engine and all-wheel drive, the Ford Explorer ST 2020 delivers an exhilarating driving experience with impressive acceleration and handling.',
+        'Featuring three rows of seating and ample cargo space, the Ford Explorer ST 2020 is a practical choice for families on the go, offering plenty of room for passengers and gear.',
+        'Equipped with premium features like leather upholstery and a 12.3-inch digital instrument cluster, the Ford Explorer ST 2020 delivers a comfortable and high-tech driving experience that rivals luxury SUVs.']
     },
     {
+        id: 8,
         type: 'motorcycle',
         brand: 'Ducati',
         model: 'Panigale',
@@ -118,9 +159,14 @@ var cars = [{
         rating: 4.8,
         mileage: 1000,
         price: 30,
-        imageLocation: 'Ducati-Panigale.jpg'
+        imageLocation: ['Ducati-Panigale.jpg','',''],
+        aspects:['Powerful and Agile','Sleek and Stylish','Innovative and High-Tech'],
+        description:['With a high-performance engine and advanced suspension, the Ducati Panigale V4 2021 offers a thrilling and responsive ride for motorcycle enthusiasts who crave speed and agility.',
+        'Boasting a sleek and aerodynamic design, the Ducati Panigale V4 2021 is a head-turner on the road, with its unmistakable Italian style and distinctive red color scheme.',
+        'Featuring state-of-the-art technology such as an advanced digital dashboard and sophisticated electronics package, the Ducati Panigale V4 2021 offers riders the ultimate in connectivity and convenience.']
     },
     {
+        id: 9,
         type: 'car',
         brand: 'Mercedes-Benz',
         model: 'S-Class',
@@ -132,9 +178,14 @@ var cars = [{
         rating: 5.0,
         mileage: 5000,
         price: 150,
-        imageLocation: 'Mercedes-Benz-S-Class.jpg'
+        imageLocation: ['Mercedes-Benz-S-Class.jpg','',''],
+        aspects:['Luxurious and High-Tech','Powerful and Dynamic','Spacious and Elegant'],
+        description:['The Mercedes-Benz S-Class S 580 2022 boasts a luxurious interior with cutting-edge technology and features, making it a top choice for drivers who prioritize comfort and convenience.',
+        "With its high-performance engine and smooth handling, the Mercedes-Benz S-Class S 580 2022 offers a thrilling driving experience that's sure to impress any car enthusiast.",
+        "With plenty of legroom and a stylish exterior design, the Mercedes-Benz S-Class S 580 2022 is a spacious and sophisticated sedan that's perfect for long drives and special occasions."]
     },
     {
+        id: 10,
         type: 'car',
         brand: 'Lamborghini',
         model: 'Aventador',
@@ -146,9 +197,14 @@ var cars = [{
         rating: 4.9,
         mileage: 1500,
         price: 500,
-        imageLocation: 'Lamborghini-Aventador-SVJ.jpg'
+        imageLocation: ['Lamborghini-Aventador-SVJ.jpg','',''],
+        aspects:['Uncompromising Performance','Precision Handling','Exotic Design'],
+        description:['The Lamborghini Aventador SVJ 2022 is a true supercar, with a powerful V12 engine and lightning-fast acceleration that delivers an adrenaline-pumping driving experience.',
+        'With its advanced aerodynamics and precision handling, the Lamborghini Aventador SVJ 2022 offers unparalleled control and maneuverability, making it the ultimate choice for drivers who demand the very best.',
+        'From its dramatic lines to its signature scissor doors, the Lamborghini Aventador SVJ 2022 is a work of art that commands attention and turns heads wherever it goes.']
     },
     {
+        id: 11,
         type: 'car',
         brand: 'Bugatti',
         model: 'Chiron',
@@ -160,9 +216,14 @@ var cars = [{
         rating: 5.0,
         mileage: 300,
         price: 5000,
-        imageLocation: 'Bugatti-Chiron-Sport.jpg'
+        imageLocation: ['Bugatti-Chiron-Sport.jpg','',''],
+        aspects:['Unmatched Performance','Luxurious and Exclusive','Incredible Design'],
+        description:["With a top speed of over 490 km/h and 1500 horsepower, the Bugatti Chiron Sport 2022 is a true engineering marvel, pushing the limits of what's possible in a street-legal supercar.",
+        "The Bugatti Chiron Sport 2022 offers a one-of-a-kind driving experience, with a meticulously crafted interior featuring the finest materials and unparalleled attention to detail.",
+        "The Bugatti Chiron Sport 2022 is not just a car, it's a work of art. From its striking lines to its aerodynamic curves, every aspect of the design has been carefully considered to create a vehicle that is both beautiful and functional."]
     },
     {
+        id: 12,
         type: 'car',
         brand: 'McLaren',
         model: 'Senna',
@@ -174,9 +235,14 @@ var cars = [{
         rating: 4.8,
         mileage: 1000,
         price: 1000,
-        imageLocation: 'McLaren-Senna.jpg'
+        imageLocation: ['McLaren-Senna.jpg','',''],
+        aspects:['Exclusive and Iconic','Pure Performance','Lightweight and Nimble'],
+        description:["With only 500 units produced worldwide, the McLaren Senna 2021 is a rare and highly sought-after supercar. Its unique design and exclusivity make it a true collector's item for automotive enthusiasts.",
+        'Designed for speed and agility, the McLaren Senna 2021 is a true performance machine. Its aerodynamic body and powerful engine make it an exhilarating ride for any driving enthusiast.',
+        'Weighing in at just 2,641 pounds, the McLaren Senna 2021 is one of the lightest supercars on the market. Its agile handling and quick acceleration make it a joy to drive on any road or track.']
     },
     {
+        id: 13,
         type: 'race car',
         brand: 'Ferrari',
         model: 'SF21',
@@ -188,8 +254,13 @@ var cars = [{
         rating: 4.9,
         mileage: 0,
         price: 'Not for sale',
-        imageLocation: 'Ferrari-SF21.jpg'
+        imageLocation: ['Ferrari-SF21.jpg','',''],
+        aspects:['High-Performance and Stylish','Innovative and Aerodynamic','Luxurious and Sophisticated'],
+        description:['The Ferrari SF21 2021 is a top-performing sports car with an eye-catching design, perfect for drivers who want to make a statement on the road.',
+        'The Ferrari SF21 2021 features advanced aerodynamic technology, giving it unparalleled speed and precision on the track.',
+        'The Ferrari SF21 2021 boasts a luxurious interior with high-quality materials, making it a comfortable and sophisticated ride for drivers and passengers alike.']
     }, {
+        id: 14,
         type: 'car',
         brand: 'Toyota',
         model: 'Supra',
@@ -201,6 +272,10 @@ var cars = [{
         rating: 4.7,
         mileage: 150000,
         price: 75,
-        imageLocation: 'Toyota-Supra.jpg'
+        imageLocation: ['Toyota-Supra.jpg','',''],
+        aspects:['Sporty and Agile','Sleek and Stylish','Reliable and Durable'],
+        description:['The Toyota Supra 1995 offers a thrilling driving experience thanks to its turbocharged engine and agile handling.',
+        'With its iconic design and smooth lines, the Toyota Supra 1995 remains a classic sports car that turns heads wherever it goes.',
+        "Known for its durability and reliability, the Toyota Supra 1995 is a testament to Toyota's commitment to quality engineering and craftsmanship."]
     }
 ];
