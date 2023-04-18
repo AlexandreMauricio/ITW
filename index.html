@@ -204,9 +204,9 @@
                     <h5 class="card-title">${vehicle.brand}</h5>
                     <h6 class="card-subtitle text-muted">${vehicle.slogan}</h6>
                 </div>
-                <img class="car-logo" src="media/image/brand/${vehicle.logo}" alt="Audi">
+                <img class="car-logo" src="media/image/brand/${vehicle.logo}" alt="${vehicle.brand}">
                 <div class="card-footer text-muted">
-                    <p class="card-text"><a href="item.html?brand=${vehicle.brand}" class="btn btn-primary">More cars</a></p>
+                    <p class="card-text"><a href="car/brand.html?brand=${vehicle.brand}" class="btn btn-primary">More cars</a></p>
                 </div>`;
             rowsElement.appendChild(brandDiv);
         });
