@@ -40,10 +40,12 @@
 .car-item{
   transition: transform 0.2s;
   max-width: 18rem;
+  z-index: auto;
 }
 
 .car-item:hover{
   transform: scale(1.05);
+  z-index: 10;
 }
 
 .row-span-2 {
@@ -66,4 +68,12 @@
 
 .carousel-item-text{
  text-shadow: 1px 1px 2px #000000;
+}
+
+.car-logo{
+  max-height: 8rem;
+}
+
+.card{
+  padding: 0;
 }
