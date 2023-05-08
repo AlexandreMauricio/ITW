@@ -171,7 +171,13 @@
                                         href="https://github.com/AlexandreMauricio?tab=repositories"
                                         target="_blank"><img src="media/image/github.svg" alt="github"></a></li>
                                 <li><a class="dropdown-item" href="#">Manuel: </a></li>
-                                <li><a class="dropdown-item" href="#">João</a></li>
+                                <li class="d-flex flex-row align-items-center m-1">João: <a
+                                    class="dropdown-item container-fluid"
+                                    href="https://www.instagram.com/janecadias/" target="_blank"><img
+                                        src="media/image/instagram.svg" alt="instagram"></a>
+                                <a class="dropdown-item  container-fluid"
+                                    href="https://github.com/JoaoDias28"
+                                    target="_blank"><img src="media/image/github.svg" alt="github"></a></li>
                             </ul>
                         </li>
                     </ul>
@@ -204,9 +210,9 @@
                     <h5 class="card-title">${vehicle.brand}</h5>
                     <h6 class="card-subtitle text-muted">${vehicle.slogan}</h6>
                 </div>
-                <img class="car-logo" src="media/image/brand/${vehicle.logo}" alt="${vehicle.brand}">
+                <img class="brand-logo" src="media/image/brand/${vehicle.logo}" alt="${vehicle.brand}">
                 <div class="card-footer text-muted">
-                    <p class="card-text"><a href="car/brand.html?brand=${vehicle.brand}" class="btn btn-primary">More cars</a></p>
+                    <p class="card-text"><a href="car/brand.html?brand=${vehicle.brand}" class="btn btn-primary">See cars</a></p>
                 </div>`;
             rowsElement.appendChild(brandDiv);
         });
