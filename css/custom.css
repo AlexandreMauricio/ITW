@@ -29,6 +29,11 @@
 
   .bd-placeholder-img {
     font-size: 1.125rem;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
     text-anchor: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
