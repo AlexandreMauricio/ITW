@@ -76,7 +76,7 @@
       </div>
     </nav>
   </header>
-  <main class="mb-5">
+  <main class="p-5 mb-5">
 
     <div class="row">
 
@@ -92,24 +92,12 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="" class="bd-placeholder-img" id="image1" alt="...">
-            <div class="carousel-caption caption-item  ">
-              <h3 class="fw-bold carousel-item-text" id="label1"></h3>
-              <h5 class="fw-bolder carousel-item-text" id="desc1"></h5>
-            </div>
           </div>
           <div class="carousel-item">
             <img src="" class="bd-placeholder-img" id="image2" alt="...">
-            <div class="carousel-caption caption-item d-md-block">
-              <h3 class="fw-bold carousel-item-text" id="label2"></h3>
-              <h5 class="fw-bolder carousel-item-text" id="desc2"></h5>
-            </div>
           </div>
           <div class="carousel-item">
             <img src="" class="bd-placeholder-img" id="image3" alt="...">
-            <div class="carousel-caption caption-item d-md-block">
-              <h3 class="fw-bold carousel-item-text" id="label3"></h3>
-              <h5 class="fw-bolder carousel-item-text" id="desc3"></h5>
-            </div>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
@@ -123,111 +111,78 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <img src="" class="rounded float-start" id="image">
     </div>
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="row mx-auto col-md-12">
+    <div class="row justify-content-center p-2">
+      <div class="col-md-8">
+        <div class="mx-auto col-md-8 fw-bolder fs-3">
           <span id="brand"></span>
           <span id="model"></span>
           <span id="year"></span>
         </div>
-        <h3 id="submodel"></h3>
-      </div>
-      <div class="col-md-6">
-        <div class="row mx-auto">
-          <i class="fas fa-dollar-sign text-success"></i>
-        <span id="price"></span>
+        <h3 id="submodel" class="col-md-8 mx-auto text-muted"></h3>
+        <div class="fs-4 text-center">
+          <span id="rating" class="fw-bold"></span>
+          <i class="car-info-icon fas fa-star text-success"></i>
+          <span> (Trips)</span>
         </div>
-        
-      </div>
-    </div>
-    <div class="row">
-
-      <div class="container text-center">
-
-
-        <div class="row row-cols-3 row-cols-3 g-2 g-lg-3">
-          <div class="col">
-            <div class="p-3">
-              <i class="fas fa-horse-head text-success"></i>
-              <span id="horsepower"></span>
-            </div>
+        <div class="fs-5 text-center mt-2 row justify-content-center">
+          <div class="col-md-6">
+            <i class="car-info-icon fas fa-tachometer-alt text-success"></i>
+            <span id="mileage"></span><span> km</span>
           </div>
-          <div class="col">
-            <div class="p-3">
-              <i class="fas fa-tachometer-alt"></i>
-              <span id="mileage"></span> km
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="p-3">
-              <i class="fas fa-gas-pump text-success"></i>
-              <span id="fuelType"></span>
-            </div>
-          </div>
-          <div class="col">
-            <div class="p-3">
-              <i class="fas fa-users"></i>
-              <span id="space"></span>
-            </div>
-          </div>
-          <div class="col">
-            <div class="p-3">
-              <i class="fas fa-star"></i>
-              <span id="rating"></span>
-            </div>
+          <div class="col-md-6">
+            <i class="car-info-icon fas fa-gas-pump text-success"></i>
+            <span id="fuelType"></span>
           </div>
         </div>
-
-
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservationModal">
-          Reservar
-        </button>
-        <div id="liveAlertPlaceholder"></div>
-      </div>
-
-
-
-    </div>
-    <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="reservationModalLabel">Select Dates</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+        <div class="fs-5 text-center mt-2 row justify-content-center">
+          <div class="col-md-6">
+            <i class="car-info-icon fas fa-horse-head text-success"></i>
+            <span id="horsepower"></span>
           </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col">
-                  <div id="calendar"></div>
-                </div>
-                <div class="row"></div>
-                <div class="col-md-4">
-                  <label for="start_date">Start Date:</label>
-                  <input type="text" id="start_date">
-                </div>
-                <div class="col-md-4">
-                  <label for="end_date">End Date:</label>
-                  <input type="text" id="end_date">
-                </div>
+          <div class="col-md-6">
+            <i class="car-info-icon fas fa-users text-success"></i>
+            <span id="space"></span>
+          </div>
+        </div>
+        <div class="col-md-12 text-success fw-semibold fs-3">Description</div>
+        <div>
+          <div id="label1" class="mt-2 fw-bold text-muted fs-4"></div>
+          <div id="desc1" class="mt-2 text-primary fs-5"></div>
+          <div id="label2" class="mt-2 fw-bold text-muted fs-4"></div>
+          <div id="desc2" class="mt-2 text-primary fs-5"></div>
+          <div id="label3" class="mt-2 fw-bold text-muted fs-4"></div>
+          <div id="desc3" class="mt-2 text-primary fs-5"></div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="mx-auto fs-3 fw-bold">
+          <i class="car-info-icon fas fa-dollar-sign text-success"></i>
+          <span id="price"></span>
+          <span>/ day</span>
+        </div>
+        <hr>
+        <div>
+          <div>
+            <div class="row">
+              <div class="col">
+                <div id="calendar"></div>
+              </div>
+              <div class="row justify-content-around mt-4"></div>
+              <div class="col-md-6">
+                <label for="start_date">Start Date:</label>
+                <input class="form-control" type="text" id="start_date">
+              </div>
+              <div class="col-md-6">
+                <label for="end_date">End Date:</label>
+                <input class="form-control" type="text" id="end_date">
               </div>
             </div>
-          </div>
-          <div class="modal-footer">
-
-            <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitReservation">Reservar</button>
+            <button type="button" class="btn btn-primary mt-5" onClick="submitReservation()">Reservar</button>
           </div>
         </div>
       </div>
     </div>
-
-
   </main>
   <footer>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
@@ -277,8 +232,6 @@
     exibirDetalhes(id);
 
   }
-
-
 
   function exibirDetalhes(id) {
     var car = cars.find(function (car) {
@@ -341,30 +294,33 @@
       alertPlaceholder.append(wrapper)
     }
 
-    // Attach the event listener to the alertTrigger element
-    const alertTrigger = document.getElementById('submitReservation')
-    if (alertTrigger) {
-      alertTrigger.addEventListener('click', () => {
-        $('#start_date, #end_date').on('change', function () {
-          startDate = moment($('#start_date').val(), 'DD-MM-YYYY').format('DD-MM-YYYY');
-          endDate = moment($('#end_date').val(), 'DD-MM-YYYY').add(1, 'days').format('DD-MM-YYYY');
-        });
-        if (startDate >= endDate) {
-          appendAlert("Reservation made : " + startDate + " - " + endDate, 'success')
-        } else {
-          appendAlert("It was not possible for us to make your reservation, please try again later", 'danger')
-        }
-        // Close the modal
-        $('#reservationModal').modal('hide');
-      })
-    }
-
-    // Handle the click event of the close button
-    $('.close').click(function () {
-      // Close the modal
-      $('#reservationModal').modal('hide');
-    });
   });
+
+  function submitReservation() {
+
+    var toast = document.createElement("div");
+    toast.classList.add("toast-container");
+    toast.classList.add("position-fixed");
+    toast.classList.add("bottom-0");
+    toast.classList.add("end-0");
+    toast.classList.add("p-3");
+    toast.innerHTML =
+      '<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">' +
+      '<div class="toast-header">' +
+      '<div class="bg-success rounded" style="width: 15px; height: 15px;"></div>' +
+      '<strong class="me-auto">Reservation to be approved</strong>' +
+      '<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>' +
+      '</div>' +
+      '<div class="toast-body">Your reservation has started, please wait the owner of the vehicle will be in contact with you soon. Thank you for using our service. ;D</div>' +
+    '</div>';
+    document.body.appendChild(toast); // Append the new div to the DOM
+
+    var toastGood = new bootstrap.Toast(document.querySelector('.toast'))
+    toastGood.show()
+    setTimeout(function () {
+      toast.remove();
+    }, 5000); // Remove the toast after 3 seconds
+  }
 </script>
 
 

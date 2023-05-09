@@ -63,10 +63,26 @@
   color: #fff;
 }
 
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-      font-size: 3.5rem;
+@media (max-width: 768px) {
+  .carousel-item-text {
+  
+    font-size: 20px;
+    color: #000000;
+    text-shadow: none;
+    text-align: left;
   }
+  .carousel-item {
+    height: 12rem;
+  }
+
+  .carousel-item > img {
+    max-height: 12rem;
+  }
+
+  .car-info-icon {
+    font-size: 1.75rem;
+  }
+
 }
 
 .caption-item{
@@ -90,19 +106,4 @@
 }
 .card{
   padding: 0;
-}
-
-.p-3{
-  margin-top: 45px;
-  font-size: 35px;
-}
-
-@media (max-width: 768px) {
-  .carousel-item-text {
-  
-    font-size: 20px;
-    color: #000000;
-    text-shadow: none;
-    text-align: left;
-  }
 }
