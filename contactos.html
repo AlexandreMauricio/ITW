@@ -52,9 +52,7 @@
                 <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="contactos.html"
-                  >Contacts</a
-                >
+                <a class="nav-link active" href="contactos.html">Contacts</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="rentYourCar.html">Rent your car</a>
@@ -128,18 +126,31 @@
       </nav>
     </header>
     <main class="p-5 mb-5">
-      <div class="container-md">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col">
-            <label for="formulario">
-              <i
-                >(+)351 960000000 <br />
-                Contact Us
-              </i>
-            </label>
+          <div class="col-md-6 col-sm-12">
             <form id="formulario" class="needs-validation" novalidate>
               <div class="row">
-                <div class="col-md-5 w-75 mb-3">
+                <div class="col col-md-6 col-sm-12 mb-3">
+                  <label for="Morada">
+                    <i>
+                      Contact Us
+                    </i>
+                  </label>
+                  <input
+                  type="text"
+                  class="form-control p-2"
+                  id="Morada"
+                  value="Rua xyz n69 6000-420"
+                  readonly
+                />
+                </div>
+                <div class="col col-md-6 col-sm-12 mb-3">
+                  <label for="inputName">
+                    <i>
+                      Your data here
+                    </i>
+                  </label>
                   <input
                     type="text"
                     class="form-control p-2"
@@ -153,7 +164,16 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-5 w-75 mb-3">
+                <div class="col col-md-6 col-sm-12 mb-3">
+                  <input
+                  type="text"
+                  class="form-control p-2"
+                  id="Email"
+                  value="email_todo_xpto@gmail.com"
+                  readonly
+                />
+                </div>
+                <div class="col-md-6 col-sm-12 mb-3">
                   <input
                     type="email"
                     class="form-control p-2"
@@ -166,7 +186,16 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-5 w-75 mb-3">
+                <div class="col col-md-6 col-sm-12 mb-3">
+                  <input
+                  type="text"
+                  class="form-control p-2"
+                  id="Telefone"
+                  value="+351 961234569"
+                  readonly
+                />
+                </div>
+                <div class="col-md-6 col-sm-12 mb-3">
                   <input
                     type="tel"
                     class="form-control p-2"
@@ -183,7 +212,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-5 w-75 mb-3">
+                <div class="col col-md-6 col-sm-12 mb-3 w-100">
                   <textarea
                     class="form-control p-2"
                     id="messageArea"
@@ -196,7 +225,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-5 w-75 mb-3">
+                <div class="col col-md-6 col-sm-12 mb-3 w-100">
                   <button type="submit" class="btn btn-dark p-2 w-100">
                     Submit
                   </button>
@@ -204,7 +233,7 @@
               </div>
             </form>
           </div>
-          <div class="col">
+          <div class="col-md-6 col-sm-12">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1424.676942466887!2d-7.519302841868197!3d39.810328594860074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3d5fdc4ed6146d%3A0xdfc5b27cbc42bbbb!2sDream%20on%20Wheels%20Detalhe%20Autom%C3%B3vel!5e1!3m2!1sen!2snl!4v1680904062887!5m2!1sen!2snl"
               allowfullscreen=""
