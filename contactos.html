@@ -1,339 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contactos</title>
-    <link href="css/global.css" rel="stylesheet" />
-  </head>
 
-  <body>
-    <audio id="musica" preload="auto" style="display: none" autoplay loop>
-      <source src="media/music/Hello_There.mp3" type="audio/mp3" />
-    </audio>
-    <header>
-      <nav
-        class="navbar navbar-expand-lg navbar-dark bg-primary"
-        aria-label="Fourth navbar example"
-      >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              fill="#18bc9c"
-              class="bi bi-car-front"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z"
-              />
-              <path
-                d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.807.807 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155 1.806 0 4.037-.084 5.592-.155A1.479 1.479 0 0 0 15 9.611v-.413c0-.099-.01-.197-.03-.294l-.335-1.68a.807.807 0 0 0-.43-.563 1.807 1.807 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3H4.82Z"
-              /></svg
-          ></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarsExample04"
-            aria-controls="navbarsExample04"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link href="css/global.css" rel="stylesheet" />
+</head>
 
-          <div class="collapse navbar-collapse" id="navbarsExample04">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="contactos.html">Contacts</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="rentYourCar.html">Rent your car</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="autores.html"
-                  id="dropdown04"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  >Authors</a
-                >
-                <ul class="dropdown-menu" aria-labelledby="dropdown04">
-                  <li><a class="dropdown-item" href="autores.html">All</a></li>
-                  <div class="dropdown-divider"></div>
-                  <li>
-                    <a class="dropdown-item" href="autores.html?author=alex"
-                      >Alexandre</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="autores.html?author=janecas"
-                      >João</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="autores.html?author=manel"
-                      >Manuel</a
-                    >
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="d-flex nav-item">
-            <a id="pararMusica" class="nav-link" onClick="stopAudio()"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                fill="#18bc9c"
-                class="bi bi-volume-up"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"
-                />
-                <path
-                  d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"
-                />
-                <path
-                  d="M10.025 8a4.486 4.486 0 0 1-1.318 3.182L8 10.475A3.489 3.489 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.486 4.486 0 0 1 10.025 8zM7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12V4zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11z"
-                /></svg
-            ></a>
-            <a id="continuarMusica" class="nav-link" onClick="playAudio()"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                fill="#18bc9c"
-                class="bi bi-volume-mute"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04 4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04zm7.854.606a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z"
-                /></svg
-            ></a>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main class="p-5 mb-5">
+<body>
+  <audio id="musica" preload="auto" style="display: none" autoplay loop>
+    <source src="media/music/Hello_There.mp3" type="audio/mp3" />
+  </audio>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Fourth navbar example">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <form id="formulario" class="needs-validation" novalidate>
-              <div class="row">
-                <div class="col col-md-6 col-sm-12 mb-3">
-                  <label for="Morada">
-                    <i>
-                      Contact Us
-                    </i>
-                  </label>
-                  <input
-                  type="text"
-                  class="form-control p-2"
-                  id="Morada"
-                  value="Rua xyz n69 6000-420"
-                  readonly
-                />
-                </div>
-                <div class="col col-md-6 col-sm-12 mb-3">
-                  <label for="inputName">
-                    <i>
-                      Your data here
-                    </i>
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control p-2"
-                    id="inputName"
-                    placeholder="Name"
-                    pattern="[A-Za-z]{1,100}"
-                    required
-                  />
-                  <div class="valid-feedback">You're doing great!</div>
-                  <div class="invalid-feedback">Please validate your name</div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col col-md-6 col-sm-12 mb-3">
-                  <input
-                  type="text"
-                  class="form-control p-2"
-                  id="Email"
-                  value="email_todo_xpto@gmail.com"
-                  readonly
-                />
-                </div>
-                <div class="col-md-6 col-sm-12 mb-3">
-                  <input
-                    type="email"
-                    class="form-control p-2"
-                    id="inputEmail"
-                    placeholder="Email"
-                    required
-                  />
-                  <div class="valid-feedback">You're doing great!</div>
-                  <div class="invalid-feedback">Please validate your email</div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col col-md-6 col-sm-12 mb-3">
-                  <input
-                  type="text"
-                  class="form-control p-2"
-                  id="Telefone"
-                  value="+351 961234569"
-                  readonly
-                />
-                </div>
-                <div class="col-md-6 col-sm-12 mb-3">
-                  <input
-                    type="tel"
-                    class="form-control p-2"
-                    id="inputPhone"
-                    maxlength="9"
-                    placeholder="Phone Number"
-                    pattern="[0-9]{9}"
-                    required
-                  />
-                  <div class="valid-feedback">You're doing great!</div>
-                  <div class="invalid-feedback">
-                    Please validate your number (Format: 960000000)
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col col-md-6 col-sm-12 mb-3 w-100">
-                  <textarea
-                    class="form-control p-2"
-                    id="messageArea"
-                    rows="10"
-                    placeholder="Write your message..."
-                    required
-                  ></textarea>
-                  <div class="valid-feedback">You're doing great!</div>
-                  <div class="invalid-feedback">Please input your message</div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col col-md-6 col-sm-12 mb-3 w-100">
-                  <button type="submit" class="btn btn-dark p-2 w-100">
-                    Submit
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1424.676942466887!2d-7.519302841868197!3d39.810328594860074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3d5fdc4ed6146d%3A0xdfc5b27cbc42bbbb!2sDream%20on%20Wheels%20Detalhe%20Autom%C3%B3vel!5e1!3m2!1sen!2snl!4v1680904062887!5m2!1sen!2snl"
-              allowfullscreen=""
-              width="100%"
-              height="100%"
-              style="border: 0"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+        <a class="navbar-brand" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+            fill="#18bc9c" class="bi bi-car-front" viewBox="0 0 16 16">
+            <path
+              d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z" />
+            <path
+              d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.807.807 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155 1.806 0 4.037-.084 5.592-.155A1.479 1.479 0 0 0 15 9.611v-.413c0-.099-.01-.197-.03-.294l-.335-1.68a.807.807 0 0 0-.43-.563 1.807 1.807 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3H4.82Z" />
+          </svg></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+          aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contactos.html">Contacts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rentYourCar.html">Rent your car</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="autores.html" id="dropdown04" data-bs-toggle="dropdown"
+                aria-expanded="false">Authors</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown04">
+                <li><a class="dropdown-item" href="autores.html">All</a></li>
+                <div class="dropdown-divider"></div>
+                <li>
+                  <a class="dropdown-item" href="autores.html?author=alex">Alexandre</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="autores.html?author=janecas">João</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="autores.html?author=manel">Manuel</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="d-flex nav-item">
+          <a id="pararMusica" class="nav-link" onClick="stopAudio()"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+              height="32" fill="#18bc9c" class="bi bi-volume-up" viewBox="0 0 16 16">
+              <path
+                d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z" />
+              <path
+                d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z" />
+              <path
+                d="M10.025 8a4.486 4.486 0 0 1-1.318 3.182L8 10.475A3.489 3.489 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.486 4.486 0 0 1 10.025 8zM7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12V4zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11z" />
+            </svg></a>
+          <a id="continuarMusica" class="nav-link" onClick="playAudio()"><svg xmlns="http://www.w3.org/2000/svg"
+              width="32" height="32" fill="#18bc9c" class="bi bi-volume-mute" viewBox="0 0 16 16">
+              <path
+                d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04 4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04zm7.854.606a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z" />
+            </svg></a>
         </div>
       </div>
-    </main>
-    <footer>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Us</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Contact</a
-                >
-              </li>
-              <li class="nav-item dropup">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="dropdown10"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  >Socials</a
-                >
-                <ul class="dropdown-menu" aria-labelledby="dropdown10">
-                  <li class="d-flex flex-row align-items-center m-1">
-                    Alexandre:
-                    <a
-                      class="dropdown-item container-fluid"
-                      href="https://www.instagram.com/alex.mauricio21/"
-                      target="_blank"
-                      ><img src="media/image/instagram.svg" alt="instagram"
-                    /></a>
-                    <a
-                      class="dropdown-item container-fluid"
-                      href="https://github.com/AlexandreMauricio?tab=repositories"
-                      target="_blank"
-                      ><img src="media/image/github.svg" alt="github"
-                    /></a>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Manuel: </a></li>
-                  <li class="d-flex flex-row align-items-center m-1">João: <a
-                    class="dropdown-item container-fluid"
-                    href="https://www.instagram.com/janecadias/" target="_blank"><img
-                        src="media/image/instagram.svg" alt="instagram"></a>
-                <a class="dropdown-item  container-fluid"
-                    href="https://github.com/JoaoDias28"
-                    target="_blank"><img src="media/image/github.svg" alt="github"></a></li>
-                </ul>
-              </li>
-            </ul>
+    </nav>
+  </header>
+  <main class="p-5 mb-5">
+
+    <div class="row justify-content-center">
+      <div class="col-md-5 shadow p-3 mb-5 bg-body-tertiary rounded">
+        <h1 class="text-success fw-bolder">Contact us</h1>
+        <p>We pride ourselves on providing our customers with a seamless online car-buying experience. Our team of
+          knowledgeable experts is here to assist you every step of the way. If you have any questions or would like to
+          schedule a test drive, please don't hesitate to contact us. We're always happy to help.</p>
+        <br>
+        <p><Strong>Email:</Strong>info@ipcbcampus.pt</p>
+        <br>
+        <p class="fw-bold">Dream on Wheels</p>
+        <p>R.F lot K7, 6000-489 Castelo branco</p>
+        <h3 class="text-success fw-bold">What can you expect after filling the form?</h3>
+        <br>
+        <ul>
+          <li>Less than 12-hour response to your question.</li>
+          <li>Thoroughness and expertise of us pretending we are a real car rental service</li>
+          <li>Plan of action summarized in an email follow up.</li>
+        </ul>
+        <form action="#" class="needs-validation" novalidate>
+          <div class="row">
+            <div class="form-floating col-md-6 mt-2">
+              <input type="text" class="form-control" id="floatingFirstName" placeholder="First Name" required>
+              <label for="floatingFirstName">First Name</label>
+            </div>
+            <div class="form-floating col-md-6 mt-2">
+              <input type="text" class="form-control" id="floatingLastName" placeholder="Last Name" required>
+              <label for="floatingLastName">Last Name</label>
+            </div>
           </div>
+          <div class="row">
+            <div class="form-floating col-md-6 mt-2">
+              <input type="email" class="form-control" id="floatingEmail" placeholder="Email" required>
+              <label for="floatingEmail">Email</label>
+            </div>
+            <div class="form-floating col-md-6 mt-2">
+              <input type="tel" class="form-control" id="floatingPhoneNumber" placeholder="Phone Number" required>
+              <label for="floatingPhoneNumber">Phone Number</label>
+            </div>
+          </div>
+          <select class="form-select row mx-auto mt-2" aria-label="What can we help you with?" required>
+            <option selected>What can we help you with?</option>
+            <option value="1">Reservations</option>
+            <option value="2">Rental requirements</option>
+            <option value="3">Rental policies</option>
+            <option value="4">Car availability and types</option>
+            <option value="5">Customer service issues</option>
+            <option value="6">Technical issues</option>
+            <option value="7">Partnerships or business inquiries</option>
+          </select>
+          <div class="row form-floating">
+            <textarea class="form-control mx-auto m-2" id="messageArea" rows="10" placeholder="Write your message..."
+              required></textarea>
+            <label for="messageArea">Please explain in the detail</label>
+          </div>
+          <div class="row mt-3">
+            <button type="button" class="btn btn-lg btn-outline-success mx-auto">Send</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-3 shadow p-3 mb-5 bg-body-tertiary rounded">
+        <h5 class="text-success mt-3 fw-bold">24/7 service always ready for you!</h5>
+        <img src="media/image/contact.jpg" alt="Contact Us" class="img-fluid">
+        <h5 class="text-success mt-3 fw-bold">Where can you find us?</h5>
+        <iframe class="mt-2"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1424.676942466887!2d-7.519302841868197!3d39.810328594860074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3d5fdc4ed6146d%3A0xdfc5b27cbc42bbbb!2sDream%20on%20Wheels%20Detalhe%20Autom%C3%B3vel!5e1!3m2!1sen!2snl!4v1680904062887!5m2!1sen!2snl"
+        allowfullscreen="" width="100%" height="50%" style="border: 0" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav">
+            <li class="nav-item dropup">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-bs-toggle="dropdown"
+                aria-expanded="false">Socials</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown10">
+                <li class="d-flex flex-row align-items-center m-1">
+                  Alexandre:
+                  <a class="dropdown-item container-fluid" href="https://www.instagram.com/alex.mauricio21/"
+                    target="_blank"><img src="media/image/instagram.svg" alt="instagram" /></a>
+                  <a class="dropdown-item container-fluid" href="https://github.com/AlexandreMauricio?tab=repositories"
+                    target="_blank"><img src="media/image/github.svg" alt="github" /></a>
+                </li>
+                <li><a class="dropdown-item" href="#">Manuel: </a></li>
+                <li class="d-flex flex-row align-items-center m-1">João: <a class="dropdown-item container-fluid"
+                    href="https://www.instagram.com/janecadias/" target="_blank"><img src="media/image/instagram.svg"
+                      alt="instagram"></a>
+                  <a class="dropdown-item  container-fluid" href="https://github.com/JoaoDias28" target="_blank"><img
+                      src="media/image/github.svg" alt="github"></a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </footer>
-  </body>
-  <script src="js/musica.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script>
-    (function () {
-      "use strict";
-
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      var forms = document.querySelectorAll(".needs-validation");
-
-      // Loop over them and prevent submission
-      Array.prototype.slice.call(forms).forEach(function (form) {
-        form.addEventListener(
-          "submit",
-          function (event) {
-            if (!form.checkValidity()) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-
-            form.classList.add("was-validated");
-          },
-          false
-        );
-      });
-    })();
-  </script>
+      </div>
+    </nav>
+  </footer>
+</body>
+<script src="js/musica.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 </html>
