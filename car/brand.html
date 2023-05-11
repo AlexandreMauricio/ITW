@@ -8,6 +8,7 @@
     <title>Brand Page</title>
     <link href="../css/global.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
@@ -152,7 +153,7 @@
 <script>
 
 var car_brand = []; // Declare car_brand as a global variable
-
+var animation = "animate__fadeInLeft";
 window.onload = function () {
   var urlParams = new URLSearchParams(window.location.search);
   var brand = urlParams.get('brand');
@@ -171,6 +172,7 @@ window.onload = function () {
   car_brand.forEach(vehicle => {
     const carsDiv = document.createElement('div');
     carsDiv.classList.add('card');
+    carsDiv.classList.add('animate__animated', animation);
             carsDiv.classList.add('mb-3');
             carsDiv.classList.add('col-lg-4');
             carsDiv.classList.add('shadow-lg');
@@ -205,52 +207,65 @@ window.onload = function () {
 
 function sortCars(option, car_brand) {
   let sortedCars = car_brand.slice(); 
-
+  
   switch (option) {
     case 'default':
       sortedCars.sort((a, b) => a.id - b.id);
+      animation = "animate__fadeInLeft"
       break;
     case 'priceLowToHigh':
       sortedCars.sort((a, b) => a.price - b.price);
+      animation = "animate__fadeInLeft"
       break;
     case 'priceHighToLow':
       sortedCars.sort((a, b) => b.price - a.price);
+      animation = "animate__fadeInLeft"
       break;
     case 'yearOldToNew':
       sortedCars.sort((a, b) => a.year - b.year);
+      animation = "animate__fadeInLeft"
       break;
     case 'yearNewToOld':
       sortedCars.sort((a, b) => b.year - a.year);
+      animation = "animate__fadeInLeft"
       break;
     case 'horsepowerLowToHigh':
       sortedCars.sort((a, b) => a.horsepower - b.horsepower);
+      animation = "animate__fadeInLeft"
       break;
     case 'horsepowerHighToLow':
       sortedCars.sort((a, b) => b.horsepower - a.horsepower);
+      animation = "animate__fadeInLeftBig"
       break;
     case 'ratingLowToHigh':
       sortedCars.sort((a, b) => a.rating - b.rating);
+      animation = "animate__fadeInLeft"
       break;
     case 'ratingHighToLow':
       sortedCars.sort((a, b) => b.rating - a.rating);
+      animation = "animate__fadeInLeft"
       break;
     case 'mileageLowToHigh':
       sortedCars.sort((a, b) => a.mileage - b.mileage);
+      animation = "animate__fadeInLeft"
       break;
     case 'mileageHighToLow':
       sortedCars.sort((a, b) => b.mileage - a.mileage);
+      animation = "animate__fadeInLeft"
       break;  
     default:
       sortedCars.sort((a, b) => a.id - b.id);
+      animation = "animate__fadeInLeft"
   }
 
-  let rowsElement = document.getElementById("cars"); // Use the let keyword to reinitialize rowsElement
+  let rowsElement = document.getElementById("cars"); 
 
   rowsElement.innerHTML = '';
 
   sortedCars.forEach((vehicle) => {
     const carsDiv = document.createElement('div');
     carsDiv.classList.add('card');
+    carsDiv.classList.add('animate__animated', animation);
             carsDiv.classList.add('mb-3');
             carsDiv.classList.add('col-lg-4');
             carsDiv.classList.add('shadow-lg');

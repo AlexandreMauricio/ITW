@@ -106,15 +106,15 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
- 
+
   <main class="p-4 mb-5">
     <div class="row">
       <ol class="breadcrumb col-md-9">
-          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-          <li class="breadcrumb-item"><a id="breadcrumb-brand" href="brand.html?brand=">Brand</a></li>
-          <li class="breadcrumb-item active" id="breadcrumb-car">Car</li>
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a id="breadcrumb-brand" href="brand.html?brand=">Brand</a></li>
+        <li class="breadcrumb-item active" id="breadcrumb-car">Car</li>
       </ol>
-  </div>
+    </div>
     <div class="row justify-content-center p-2">
       <div class="col-md-8">
         <div class="mx-auto col-md-8 fw-bolder fs-1">
@@ -264,9 +264,9 @@
       document.getElementById("image1").src = "../media/image/" + car.imageLocation[0];
       document.getElementById("image2").src = "../media/image/" + car.imageLocation[1];
       document.getElementById("image3").src = "../media/image/" + car.imageLocation[2];
-      document.getElementById("breadcrumb-car").textContent = car.model +" "+ car.submodel+" "+ car.year;
-      document.getElementById("breadcrumb-brand").href = "brand.html?brand="+car.brand;
-      document.getElementById("breadcrumb-brand").textContent= car.brand;
+      document.getElementById("breadcrumb-car").textContent = car.model + " " + car.submodel + " " + car.year;
+      document.getElementById("breadcrumb-brand").href = "brand.html?brand=" + car.brand;
+      document.getElementById("breadcrumb-brand").textContent = car.brand;
     }
   }
 
