@@ -64,5 +64,33 @@ var brands = [{
         brand: "Volvo",
         slogan: "For Life",
         logo: "volvo.jpg"
+    },{
+        brand: "Tesla",
+        slogan: "Accelerating the world's transition to sustainable energy",
+        logo: "tesla.png"
+    },{
+        brand: "Mazda",
+        slogan: "Feel Alive",
+        logo: "mazda.png"
+    },{
+        brand: "Acura",
+        slogan: "Precision Crafted Performance",
+        logo: "acura.png"
+    },{
+        brand: "Jaguar",
+        slogan: "The Art of Performance",
+        logo: "jaguar.png"
+    },{
+        brand: "Land Rover",
+        slogan: "Above and Beyond",
+        logo: "landrover.png"
+    },{
+        brand: "Ferrari",
+        slogan: "We are the competition",
+        logo: "ferrari.png"
+    },{
+        brand: "Maserati",
+        slogan: "Luxury, sports and style cast in exclusive cars",
+        logo: "maserati.png"
     }
 ]
