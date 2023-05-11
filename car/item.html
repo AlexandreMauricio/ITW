@@ -106,8 +106,15 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-
+ 
   <main class="p-5 mb-5">
+    <div class="row p-3">
+      <ol class="breadcrumb col-md-9">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item"><a id="breadcrumb-brand" href="brand.html?brand=">Brand</a></li>
+          <li class="breadcrumb-item active" id="breadcrumb-car">Car</li>
+      </ol>
+  </div>
     <div class="row justify-content-center p-2">
       <div class="col-md-8">
         <div class="mx-auto col-md-8 fw-bolder fs-3">
@@ -141,13 +148,13 @@
             <span id="space"></span>
           </div>
         </div>
-        <div class="col-md-12 text-success fw-semibold fs-3">Description</div>
-        <div>
-          <div id="label1" class="mt-2 fw-bold text-muted fs-4"></div>
+        <div class="col-md-12 text-secondary fw-semibold fs-3"></div>
+        <div class="p-2">
+          <div id="label1" class="mt-2 fw-bold text-success fs-4"></div>
           <div id="desc1" class="mt-2 text-primary fs-5"></div>
-          <div id="label2" class="mt-2 fw-bold text-muted fs-4"></div>
+          <div id="label2" class="mt-2 fw-bold text-success fs-4"></div>
           <div id="desc2" class="mt-2 text-primary fs-5"></div>
-          <div id="label3" class="mt-2 fw-bold text-muted fs-4"></div>
+          <div id="label3" class="mt-2 fw-bold text-success fs-4"></div>
           <div id="desc3" class="mt-2 text-primary fs-5"></div>
         </div>
       </div>
@@ -257,6 +264,9 @@
       document.getElementById("image1").src = "../media/image/" + car.imageLocation[0];
       document.getElementById("image2").src = "../media/image/" + car.imageLocation[1];
       document.getElementById("image3").src = "../media/image/" + car.imageLocation[2];
+      document.getElementById("breadcrumb-car").textContent = car.model + car.submodel + car.year;
+      document.getElementById("breadcrumb-brand").href = "brand.html?brand="+car.brand;
+      document.getElementById("breadcrumb-brand").textContent= car.brand;
     }
   }
 
