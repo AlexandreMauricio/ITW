@@ -22,11 +22,7 @@ var brands = [{
         brand: "Nissan",
         slogan: "Innovation that excites",
         logo: "nissan.png"
-    }, {
-        brand: "Jeep",
-        slogan: "There's only one",
-        logo: "jeep.jpg"
-    }, {
+    },{
         brand: "Hyundai",
         slogan: "New thinking. New possibilities",
         logo: "hyundai.jpg"
@@ -66,31 +62,16 @@ var brands = [{
         logo: "volvo.jpg"
     },{
         brand: "Tesla",
-        slogan: "Accelerating the world's transition to sustainable energy",
+        slogan: "Accelerating the world's transition to sustainable energy.",
         logo: "tesla.png"
-    },{
-        brand: "Mazda",
-        slogan: "Feel Alive",
-        logo: "mazda.png"
-    },{
-        brand: "Acura",
-        slogan: "Precision Crafted Performance",
-        logo: "acura.png"
-    },{
-        brand: "Jaguar",
-        slogan: "The Art of Performance",
-        logo: "jaguar.png"
-    },{
-        brand: "Land Rover",
-        slogan: "Above and Beyond",
-        logo: "landrover.png"
     },{
         brand: "Ferrari",
         slogan: "We are the competition",
         logo: "ferrari.png"
     },{
-        brand: "Maserati",
-        slogan: "Luxury, sports and style cast in exclusive cars",
-        logo: "maserati.png"
+        brand: "Lamborghini",
+        slogan: "Follow Your Heart",
+        logo: "lamborghini.png"
     }
+    
 ]

@@ -160,11 +160,14 @@ window.onload = function () {
 
   document.getElementById("breadcrumb-brand").textContent = brand;
 
-  car_brand = []; // Clear the car_brand array before filtering
+  car_brand = [];
 
-  for (let i = cars.length - 1; i >= 0; i--) { // Modified the loop condition to include the first element
-    if (cars[i].brand == brand)
-      car_brand.push(cars[i]);
+
+  for (var i = cars.length - 1; i >= 0; i--) { // Modified the loop condition to include the first element
+    if (cars[i].brand == brand){
+        car_brand.push(cars[i]);
+    }
+      
   }
 
   let rowsElement = document.getElementById("cars"); // Use the let keyword to initialize rowsElement
