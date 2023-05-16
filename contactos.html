@@ -138,7 +138,7 @@
             <label for="messageArea">Please explain in the detail</label>
           </div>
           <div class="row mt-3">
-            <button type="button" class="btn btn-lg btn-outline-success mx-auto">Send</button>
+            <button type="button" onclick="submitContact()" class="btn btn-lg btn-outline-success mx-auto">Send</button>
           </div>
         </form>
       </div>
@@ -189,5 +189,32 @@
 </body>
 <script src="js/musica.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script>
+  function submitContact() {
+
+    var toast = document.createElement("div");
+    toast.classList.add("toast-container");
+    toast.classList.add("position-fixed");
+    toast.classList.add("bottom-0");
+    toast.classList.add("end-0");
+    toast.classList.add("p-3");
+    toast.innerHTML =
+      '<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">' +
+      '<div class="toast-header">' +
+      '<div class="bg-success rounded" style="width: 15px; height: 15px;"></div>' +
+      '<strong class="me-auto">Reservation to be approved</strong>' +
+      '<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>' +
+      '</div>' +
+      '<div class="toast-body">We will shortly enter in contact with you when available to help you with your problem</div>' +
+      '</div>';
+    document.body.appendChild(toast); // Append the new div to the DOM
+
+    var toastGood = new bootstrap.Toast(document.querySelector('.toast'))
+    toastGood.show()
+    setTimeout(function () {
+      toast.remove();
+    }, 5000); // Remove the toast after 3 seconds
+  }
+</script>
 
 </html>
