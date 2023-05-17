@@ -138,32 +138,31 @@
         let rowsElement = document.getElementById("cars"); // Use the let keyword to initialize rowsElement
 
         car_brand.forEach(vehicle => {
-            const carsDiv = document.createElement('div');
+            const carsDiv = document.createElement('a');
             carsDiv.classList.add('card');
             carsDiv.classList.add('animate__animated', animation);
             carsDiv.classList.add('mb-3');
+            carsDiv.classList.add('pb-3');
             carsDiv.classList.add('col-lg-4');
             carsDiv.classList.add('shadow-lg');
             carsDiv.classList.add('car-item');
             carsDiv.classList.add('mx-auto');
             carsDiv.innerHTML =
                 `<div class="card-body">
-                            <h5 class="card-title">${vehicle.brand} ${vehicle.model} ${vehicle.submodel}</h5>
+                            <h4 class="card-title fw-bolder">${vehicle.brand} ${vehicle.model} ${vehicle.submodel}</h4>
                             <h6 class="card-subtitle text-muted">${vehicle.description[0]}</h6>
                         </div>
                         <img class="car-logo" src="../media/image/cars/${vehicle.imageLocation[0]}" alt="${vehicle.id}">
                        <div class="card-footer text-primary">
                             <div class="row">
                                 <div class="col p-2">
-                                 <i class="car-info-icon fas fa-dollar-sign text-success"></i>
-                                 <span class="fs-4 fw-bold">${vehicle.price}</span>
-                                 <span class="fs-4 fw-bold">/ day</span>
-                                </div>
-                                <div class="col p-2">
-                                    <a href="item.html?id=${vehicle.id}" class="btn btn-primary">Check it out!</a>
+                                    <i class="car-info-icon fas fa-dollar-sign text-success"></i>
+                                    <span class="fs-4 fw-bold">${vehicle.price}</span>
+                                    <span class="fs-4 fw-bold">/ day</span>
                                 </div>
                             </div>
                 </div>`;
+                carsDiv.href = 'item.html?id='+vehicle.id;
             rowsElement.appendChild(carsDiv);
         });
 

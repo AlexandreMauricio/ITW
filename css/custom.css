@@ -94,13 +94,17 @@
   height: 200px;
   object-fit: cover;
 }
+
 .card{
   padding: 5px;
-  height: 20rem;
   text-decoration: none;
   transition: transform 0.2s;
   z-index: auto;
   max-width: calc(100vw/7);
+}
+
+.brand-card{
+  height: 20rem;
 }
 
 /*Hover*/

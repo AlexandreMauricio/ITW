@@ -28,7 +28,7 @@ footer.innerHTML = '<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixe
                                             </ul>\
                                         </li>\
                                         <li class="nav-item dropup">\
-                                            <a class="nav-link" href="#" onClick="checkVideoVisibility()" data-bs-toggle="modal" data-bs-target="#exampleModal" id="dropdown20">Sponsors</a>\
+                                            <a class="nav-link" href="#" onClick="stopAudio()" data-bs-toggle="modal" data-bs-target="#exampleModal" id="dropdown20">Sponsors</a>\
                                         </li>\
                                     </ul>\
                                 </div>\
@@ -39,7 +39,7 @@ footer.innerHTML = '<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixe
                                 <div class="modal-content">\
                                     <div class="modal-header">\
                                         <h1 class="modal-title fs-5 mx-auto text-success fw-bolder" id="exampleModalLabel">Our Sponsors - FIA Formula 1</h1>\
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>\
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" onClick="playAudio()" aria-label="Close"></button>\
                                     </div>\
                                     <div class="modal-body mx-auto">\
                                         <video width="500" controls>\
