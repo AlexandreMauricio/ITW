@@ -27,10 +27,29 @@ footer.innerHTML = '<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixe
                                                         target="_blank"><img src="media/image/github.svg" alt="github"></a></li>\
                                             </ul>\
                                         </li>\
+                                        <li class="nav-item dropup">\
+                                            <a class="nav-link" href="#" onClick="checkVideoVisibility()" data-bs-toggle="modal" data-bs-target="#exampleModal" id="dropdown20">Sponsors</a>\
+                                        </li>\
                                     </ul>\
                                 </div>\
                             </div>\
-                        </nav>';
+                        </nav>\
+                        <div class="modal modal-xl fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">\
+                            <div class="modal-dialog">\
+                                <div class="modal-content">\
+                                    <div class="modal-header">\
+                                        <h1 class="modal-title fs-5 mx-auto text-success fw-bolder" id="exampleModalLabel">Our Sponsors - FIA Formula 1</h1>\
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>\
+                                    </div>\
+                                    <div class="modal-body mx-auto">\
+                                        <video width="500" controls>\
+                                            <source src="media/video/f1Intro.mp4" type="video/mp4">\
+                                            Your browser does not support the video tag.\
+                                        </video>\
+                                    </div>\
+                                </div>\
+                            </div>\
+                        </div>';
 document.body.appendChild(footer);
 
 function addMusic (folder) {
@@ -47,3 +66,35 @@ function addMusic (folder) {
     document.body.appendChild(music);
 
 }
+
+
+function checkVideoVisibility() {
+    const modal = document.querySelector('.modal');
+    const video = document.querySelector('video');
+    const videoPosition = video.getBoundingClientRect();
+    const modalPosition = modal.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const videoIsVisible = 
+      videoPosition.bottom > modalPosition.top && 
+      videoPosition.right > modalPosition.left && 
+      videoPosition.top < modalPosition.bottom && 
+      videoPosition.left < modalPosition.right &&
+      videoPosition.bottom > 0 && 
+      videoPosition.right > 0 && 
+      videoPosition.top < viewportHeight && 
+      videoPosition.left < viewportWidth;
+  
+    if (videoIsVisible) {
+      // Video is visible, play it
+      if (video.paused) {
+        video.play();
+      }
+    } else {
+      // Video is not visible, pause it
+      if (!video.paused) {
+        video.pause();
+      }
+    }
+  }
+  
