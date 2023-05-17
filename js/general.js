@@ -52,7 +52,7 @@ footer.innerHTML = '<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixe
                         </div>';
 document.body.appendChild(footer);
 
-function addMusic (folder) {
+function addMusic(folder) {
 
     const music = document.createElement('audio');
     music.setAttribute('id', 'musica');
@@ -67,6 +67,20 @@ function addMusic (folder) {
 
 }
 
+function stopAudio() {
+    var audio = document.getElementById("musica");
+    audio.pause();
+    document.getElementById("continuarMusica").style.display = "flex"
+    document.getElementById("pararMusica").style.display = "none"
+}
+
+function playAudio() {
+    var audio = document.getElementById("musica");
+    audio.play();
+    document.getElementById("continuarMusica").style.display = "none"
+    document.getElementById("pararMusica").style.display = "flex"
+}
+
 
 function checkVideoVisibility() {
     const modal = document.querySelector('.modal');
@@ -75,26 +89,25 @@ function checkVideoVisibility() {
     const modalPosition = modal.getBoundingClientRect();
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
-    const videoIsVisible = 
-      videoPosition.bottom > modalPosition.top && 
-      videoPosition.right > modalPosition.left && 
-      videoPosition.top < modalPosition.bottom && 
-      videoPosition.left < modalPosition.right &&
-      videoPosition.bottom > 0 && 
-      videoPosition.right > 0 && 
-      videoPosition.top < viewportHeight && 
-      videoPosition.left < viewportWidth;
-  
+    const videoIsVisible =
+        videoPosition.bottom > modalPosition.top &&
+        videoPosition.right > modalPosition.left &&
+        videoPosition.top < modalPosition.bottom &&
+        videoPosition.left < modalPosition.right &&
+        videoPosition.bottom > 0 &&
+        videoPosition.right > 0 &&
+        videoPosition.top < viewportHeight &&
+        videoPosition.left < viewportWidth;
+
     if (videoIsVisible) {
-      // Video is visible, play it
-      if (video.paused) {
-        video.play();
-      }
+        // Video is visible, play it
+        if (video.paused) {
+            video.play();
+        }
     } else {
-      // Video is not visible, pause it
-      if (!video.paused) {
-        video.pause();
-      }
+        // Video is not visible, pause it
+        if (!video.paused) {
+            video.pause();
+        }
     }
-  }
-  
+}
