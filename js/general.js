@@ -42,8 +42,9 @@ footer.innerHTML = '<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixe
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" onClick="playAudio()" aria-label="Close"></button>\
                                     </div>\
                                     <div class="modal-body mx-auto">\
-                                        <video width="500" controls>\
+                                        <video id="promoVideo" width="500" controls>\
                                             <source src="media/video/f1Intro.mp4" type="video/mp4">\
+                                            <source src="../media/video/f1Intro.mp4" type="video/mp4">\
                                             Your browser does not support the video tag.\
                                         </video>\
                                     </div>\
@@ -52,13 +53,15 @@ footer.innerHTML = '<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixe
                         </div>';
 document.body.appendChild(footer);
 
+
+
 function addMusic(folder) {
 
     const music = document.createElement('audio');
     music.setAttribute('id', 'musica');
     music.setAttribute('preload', 'auto');
     music.style = 'display: none';
-    music.volume = 0.2;
+    music.volume = 0.1;
     music.setAttribute('autoplay', 'true');
     music.setAttribute('loop', 'true');
     music.innerHTML = !folder ? '<source src = "media/music/Bandolero.mp3" type = "audio/mp3" >' : '<source src = "../media/music/Bandolero.mp3" type = "audio/mp3" >';
@@ -66,6 +69,8 @@ function addMusic(folder) {
     document.body.appendChild(music);
 
 }
+
+
 
 function stopAudio() {
     var audio = document.getElementById("musica");
@@ -77,37 +82,8 @@ function stopAudio() {
 function playAudio() {
     var audio = document.getElementById("musica");
     audio.play();
+    audio.volume = 0.1;
     document.getElementById("continuarMusica").style.display = "none"
     document.getElementById("pararMusica").style.display = "flex"
 }
 
-
-function checkVideoVisibility() {
-    const modal = document.querySelector('.modal');
-    const video = document.querySelector('video');
-    const videoPosition = video.getBoundingClientRect();
-    const modalPosition = modal.getBoundingClientRect();
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
-    const videoIsVisible =
-        videoPosition.bottom > modalPosition.top &&
-        videoPosition.right > modalPosition.left &&
-        videoPosition.top < modalPosition.bottom &&
-        videoPosition.left < modalPosition.right &&
-        videoPosition.bottom > 0 &&
-        videoPosition.right > 0 &&
-        videoPosition.top < viewportHeight &&
-        videoPosition.left < viewportWidth;
-
-    if (videoIsVisible) {
-        // Video is visible, play it
-        if (video.paused) {
-            video.play();
-        }
-    } else {
-        // Video is not visible, pause it
-        if (!video.paused) {
-            video.pause();
-        }
-    }
-}

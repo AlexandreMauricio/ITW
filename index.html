@@ -89,7 +89,17 @@
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/brands.js"></script>
 <script src="js/general.js"></script>
+<script src="js/JQUERY/jquery.js"></script>
 <script>
+    $('#exampleModal').on('hidden.bs.modal', function () {
+        var video = document.getElementById("promoVideo");
+
+        video.pause();
+        video.currentTime = 0;
+        playAudio()
+
+    })
+
     window.onload = function () {
 
         addMusic(false);
