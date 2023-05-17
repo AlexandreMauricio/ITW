@@ -96,23 +96,25 @@
 }
 .card{
   padding: 5px;
+  height: 20rem;
   text-decoration: none;
   transition: transform 0.2s;
   z-index: auto;
+  max-width: calc(100vw/7);
 }
 
 /*Hover*/
 .card:hover {
-  border: 1px solid black;
+  border: 3px solid rgb(24, 188, 156);
   transform: scale(1.05);
   z-index: 10;
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* For screens with a minimum width of 1025px (i.e., larger desktops) */
-@media screen and (min-width: 1025px) {
+/* For screens with a maximum width of 1420 (i.e., medium desktops) */
+@media screen and (max-width: 1420px) {
   .card {
-    max-width: min(calc(100vw/7), 30vw); /* Set a specific max-width in pixels or as a percentage of the viewport width, whichever is smaller */
+    max-width: 30vw; /* Set a specific max-width in pixels or as a percentage of the viewport width, whichever is smaller */
   }
 }
 
