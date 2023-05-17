@@ -135,22 +135,22 @@
 
         rowsElement = document.getElementById("brands");
         brands.forEach(vehicle => {
-            const brandDiv = document.createElement('div');
+            const brandDiv = document.createElement('a');
             brandDiv.classList.add('card');
             brandDiv.classList.add('mb-3');
+            brandDiv.classList.add('pb-3');
             brandDiv.classList.add('col-lg-4');
             brandDiv.classList.add('shadow-lg');
             brandDiv.classList.add('car-item');
             brandDiv.classList.add('mx-auto');
             brandDiv.innerHTML =
                 `<div class="card-body">
-                    <h5 class="card-title">${vehicle.brand}</h5>
+                    <h4 class="card-title fw-bolder">${vehicle.brand}</h4>
                     <h6 class="card-subtitle text-muted">${vehicle.slogan}</h6>
                 </div>
-                <img class="brand-logo" src="media/image/brand/${vehicle.logo}" alt="${vehicle.brand}">
-                <div class="card-footer text-muted">
-                    <p class="card-text"><a href="car/brand.html?brand=${vehicle.brand}" class="btn btn-primary">See cars</a></p>
-                </div>`;
+                <img class="brand-logo mx-auto" src="media/image/brand/${vehicle.logo}" alt="${vehicle.brand}">`;
+                
+            brandDiv.href = 'car/brand.html?brand='+vehicle.brand;
             rowsElement.appendChild(brandDiv);
         });
 
