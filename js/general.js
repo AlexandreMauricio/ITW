@@ -18,7 +18,13 @@ footer.innerHTML = '<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixe
                                                     <a class="dropdown-item  container-fluid"\
                                                         href="https://github.com/AlexandreMauricio?tab=repositories"\
                                                         target="_blank"><img src="media/image/github.svg" alt="github"></a></li>\
-                                                <li><a class="dropdown-item" href="#">Manuel: </a></li>\
+                                                <li class="d-flex flex-row align-items-center m-1">Manuel: <a\
+                                                        class="dropdown-item container-fluid"\
+                                                        href="https://www.instagram.com/necasgjrolo/" target="_blank"><img\
+                                                            src="media/image/instagram.svg" alt="instagram"></a>\
+                                                    <a class="dropdown-item  container-fluid"\
+                                                        href="https://github.com/NecasGJRolo?tab=repositories"\
+                                                        target="_blank"><img src="media/image/github.svg" alt="github"></a></li>\
                                                 <li class="d-flex flex-row align-items-center m-1">João: <a\
                                                         class="dropdown-item container-fluid"\
                                                         href="https://www.instagram.com/janecadias/" target="_blank"><img\
