@@ -296,9 +296,11 @@
     var expandedImageContainer = document.getElementById('expandedImageContainer');
     var expandedImage = document.getElementById('expandedImage');
 
+    if(expandedImage.src != '') {
     expandedImage.src = imageSrc;
     expandedImageContainer.style.display = 'flex';
   }
+}
 
   function closeExpandedImage() {
     var expandedImageContainer = document.getElementById('expandedImageContainer');
@@ -311,7 +313,7 @@
   var closeButton = document.getElementById('closeButton');
   closeButton.addEventListener('click', closeExpandedImage);
 </script>
-</script>
+
 
 
 </html>
