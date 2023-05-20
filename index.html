@@ -125,7 +125,9 @@
                     <h4 class="card-title fw-bolder">${vehicle.brand}</h4>
                     <h6 class="card-subtitle text-muted">${vehicle.slogan}</h6>
                 </div>
-                <img class="brand-logo mx-auto" src="media/image/brand/${vehicle.logo}" alt="${vehicle.brand}">`;
+                <div class="car-logo">
+                <img class="brand-logo mx-auto" src="media/image/brand/${vehicle.logo}" alt="${vehicle.brand}">
+                </div>`;
 
             brandDiv.href = 'car/brand.html?brand=' + vehicle.brand;
             rowsElement.appendChild(brandDiv);
