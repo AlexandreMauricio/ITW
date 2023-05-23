@@ -28,13 +28,12 @@
   }
 
   .bd-placeholder-img {
-    font-size: 1.125rem;
+   
     max-width: 100%;
     width: 100%;
     height: 100%;
     position: absolute;
     object-fit: cover;
-    text-anchor: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -42,17 +41,6 @@
 
 .banner {
   margin-top: 4rem;
-}
-
-.car-item{
-  transition: transform 0.2s;
-  max-width: 18rem;
-  z-index: auto;
-}
-
-.car-item:hover{
-  transform: scale(1.05);
-  z-index: 10;
 }
 
 .row-span-2 {
@@ -91,12 +79,13 @@
 }
 
 .carousel-item-text{
-  
+
   text-shadow: 1px 1px 2px #000000;
 }
 
 .brand-logo {
-  height: 200px;
+  max-height: 10rem;
+  width: 100%;
   object-fit: contain;
 }
 
@@ -104,6 +93,89 @@
   height: 200px;
   object-fit: cover;
 }
+
 .card{
+  padding: 5px;
+  text-decoration: none;
+  transition: transform 0.2s;
+  z-index: auto;
+  max-width: calc(100vw/7);
+}
+
+.brand-card{
+  height: 20rem;
+}
+
+#expandedImageContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+#expandedImageContainer img {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+#closeButton {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  color: #fff;
+  font-size: 48px;
+  cursor: pointer;
+}
+
+
+
+/*Hover*/
+.card:hover {
+  border: 3px solid rgb(24, 188, 156);
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+video {
+  position: relative;
+  display: block;
+  width: 100%;
   padding: 0;
+  overflow: hidden;
+}
+
+/* For screens with a maximum width of 1420 (i.e., medium desktops) */
+@media screen and (max-width: 1420px) {
+  .card {
+    max-width: 30vw; /* Set a specific max-width in pixels or as a percentage of the viewport width, whichever is smaller */
+  }
+}
+
+
+/* For screens with a maximum width of 1024px (i.e., tablets and smaller desktops) */
+@media screen and (max-width: 1024px) {
+  .card {
+    max-width: 40vw; /* Set a specific max-width as a percentage of the viewport width */
+  }
+}
+
+/* For screens with a maximum width of 768px (i.e., tablets and smaller) */
+@media screen and (max-width: 768px) {
+  .card {
+    max-width: 50vw; /* Set a larger max-width for larger screens */
+  }
+}
+
+/* For screens with a maximum width of 480px (i.e., mobile devices) */
+@media screen and (max-width: 480px) {
+  .card {
+    max-width: 90vw; /* Set a smaller max-width for smaller screens */
+  }
 }

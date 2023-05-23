@@ -10,9 +10,6 @@
 </head>
 
 <body>
-    <audio id="musica" preload="auto" style="display:none;" autoplay loop>
-        <source src="media/music/Hello_There.mp3" type="audio/mp3">
-    </audio>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Fourth navbar example">
             <div class="container-fluid">
@@ -88,45 +85,24 @@
         <div id="brands" class="row mx-auto mt-2">
         </div>
     </main>
-    <footer>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropup">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-bs-toggle="dropdown"
-                                aria-expanded="false">Socials</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown10">
-                                <li class="d-flex flex-row align-items-center m-1">Alexandre: <a
-                                        class="dropdown-item container-fluid"
-                                        href="https://www.instagram.com/alex.mauricio21/" target="_blank"><img
-                                            src="media/image/instagram.svg" alt="instagram"></a>
-                                    <a class="dropdown-item  container-fluid"
-                                        href="https://github.com/AlexandreMauricio?tab=repositories"
-                                        target="_blank"><img src="media/image/github.svg" alt="github"></a></li>
-                                <li><a class="dropdown-item" href="#">Manuel: </a></li>
-                                <li class="d-flex flex-row align-items-center m-1">João: <a
-                                        class="dropdown-item container-fluid"
-                                        href="https://www.instagram.com/janecadias/" target="_blank"><img
-                                            src="media/image/instagram.svg" alt="instagram"></a>
-                                    <a class="dropdown-item  container-fluid" href="https://github.com/JoaoDias28"
-                                        target="_blank"><img src="media/image/github.svg" alt="github"></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </footer>
 </body>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/brands.js"></script>
+<script src="js/general.js"></script>
+<script src="js/JQUERY/jquery.js"></script>
 <script>
+    $('#exampleModal').on('hidden.bs.modal', function () {
+        var video = document.getElementById("promoVideo");
+
+        video.pause();
+        video.currentTime = 0;
+        playAudio()
+
+    })
+
     window.onload = function () {
+
+        addMusic(false);
 
         for (let i = brands.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -135,28 +111,30 @@
 
         rowsElement = document.getElementById("brands");
         brands.forEach(vehicle => {
-            const brandDiv = document.createElement('div');
+            const brandDiv = document.createElement('a');
             brandDiv.classList.add('card');
+            brandDiv.classList.add('brand-card');
             brandDiv.classList.add('mb-3');
+            brandDiv.classList.add('pb-3');
             brandDiv.classList.add('col-lg-4');
             brandDiv.classList.add('shadow-lg');
             brandDiv.classList.add('car-item');
             brandDiv.classList.add('mx-auto');
             brandDiv.innerHTML =
-                `<div class="card-body">
-                    <h5 class="card-title">${vehicle.brand}</h5>
+                `<div class="card-body pb-0"">
+                    <h4 class="card-title fw-bolder">${vehicle.brand}</h4>
                     <h6 class="card-subtitle text-muted">${vehicle.slogan}</h6>
                 </div>
-                <img class="brand-logo" src="media/image/brand/${vehicle.logo}" alt="${vehicle.brand}">
-                <div class="card-footer text-muted">
-                    <p class="card-text"><a href="car/brand.html?brand=${vehicle.brand}" class="btn btn-primary">See cars</a></p>
+                <div class="car-logo">
+                <img class="brand-logo mx-auto" src="media/image/brand/${vehicle.logo}" alt="${vehicle.brand}">
                 </div>`;
+
+            brandDiv.href = 'car/brand.html?brand=' + vehicle.brand;
             rowsElement.appendChild(brandDiv);
         });
 
 
     };
 </script>
-<script src="js/musica.js"></script>
 
 </html>

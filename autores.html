@@ -7,12 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authors</title>
     <link href="css/global.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
-    <audio id="musica" preload="auto" style="display:none;" autoplay loop>
-        <source src="media/music/dartacao.mp3" type="audio/mp3">
-    </audio>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Fourth navbar example">
             <div class="container-fluid">
@@ -96,7 +94,7 @@
                         <div class="row">
                             <img src="media/image/alex_author.jpg" class="col-lg-3 row-span-2 author-photo" alt="Alex">
                             <div class="col-lg-9">
-                                <h3 class="text-center text-success">Alexandre Maurício</h3>
+                                <h3 class="text-center text-danger">Alexandre Maurício <i class="fab fa-sith"></i></h3>
                                 <ul>
                                     <li>22 years (Warranty expired)</li>
                                     <li>Lardosa - Castelo Branco</li>
@@ -107,13 +105,50 @@
                                 </ul>
                             </div>
                         </div>
+                        <div class="row mt-3">
+                            <figure class="text-center">
+                                <blockquote class="blockquote">
+                                    <p class="mb-0">I do not fear the <span class="text-danger fw-bold">dark side</span> as you do. I have brought peace, freedom, justice and security to my new Empire!
+                                </blockquote>
+                                <figcaption class="blockquote-footer">
+                                    Anakin Skywalker in <cite title="Source Title">Star Wars - Revenge of the Sith</cite>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button id="janecaButton" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#janecaAuthor" aria-expanded="false" aria-controls="collapseThree">
+                        João Dias
+                    </button>
+                </h2>
+                <div id="janecaAuthor" class="accordion-collapse collapse show" aria-labelledby="joaoHeading"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <img src="media/image/joao_author.jpg" class="col-lg-3 row-span-2 author-photo" alt="Joao">
+                            <div class="col-lg-9">
+                                <h3 class="text-center text-info">João Dias <i class="fab fa-jedi-order"></i></h3>
+                                <ul>
+                                    <li>21 years (feels like 84)</li>
+                                    <li>Figueiró dos Vinhos - Leiria</li>
+                                    <li>Student number: 20191749</li>
+                                    <li>Third year</li>
+                                    <li>Addicted Gamer</li>
+                                    <li>Sometimes smart, sometimes not so smart</li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="row">
                             <figure class="text-center">
                                 <blockquote class="blockquote">
-                                    <p class="mb-0">Dude, you're embarrassing me in front of the wizards.
+                                    <p class="mb-0"> Your new <strong>empire?</strong> Anakin, my allegiance is to the <strong class="text-info fw-bold">Republic</strong>, to democracy!
                                 </blockquote>
                                 <figcaption class="blockquote-footer">
-                                    Tony Stark in <cite title="Source Title">Avengers Infinity War</cite>
+                                    Obi-Wan Kenobi in <cite title="Source Title">Star Wars - Revenge of the Sith</cite>
                                 </figcaption>
                             </figure>
                         </div>
@@ -158,84 +193,13 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button id="janecaButton" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#janecaAuthor" aria-expanded="false" aria-controls="collapseThree">
-                        João Dias
-                    </button>
-                </h2>
-                <div id="janecaAuthor" class="accordion-collapse collapse show" aria-labelledby="joaoHeading"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <div class="row">
-                            <img src="media/image/joao_author.jpg" class="col-lg-3 row-span-2 author-photo" alt="Joao">
-                            <div class="col-lg-9">
-                                <h3 class="text-center text-success">João Dias</h3>
-                                <ul>
-                                    <li>21 years (feels like 84)</li>
-                                    <li>Figueiró dos Vinhos - Leiria</li>
-                                    <li>Student number: 20191749</li>
-                                    <li>Third year</li>
-                                    <li>Addicted Gamer</li>
-                                    <li>Sometimes smart, sometimes not so smart</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <figure class="text-center">
-                                <blockquote class="blockquote">
-                                    <p class="mb-0"> Me think, why waste time say lot word when few word do trick
-                                </blockquote>
-                                <figcaption class="blockquote-footer">
-                                    Kevin Malone in <cite title="Source Title">The Office</cite>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </main>
-    <footer>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropup">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-bs-toggle="dropdown"
-                                aria-expanded="false">Socials</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown10">
-                                <li class="d-flex flex-row align-items-center m-1">Alexandre: <a
-                                        class="dropdown-item container-fluid"
-                                        href="https://www.instagram.com/alex.mauricio21/" target="_blank"><img
-                                            src="media/image/instagram.svg" alt="instagram"></a>
-                                    <a class="dropdown-item  container-fluid"
-                                        href="https://github.com/AlexandreMauricio?tab=repositories"
-                                        target="_blank"><img src="media/image/github.svg" alt="github"></a></li>
-                                <li><a class="dropdown-item" href="#">Manuel: </a></li>
-                                <li class="d-flex flex-row align-items-center m-1">João: <a
-                                    class="dropdown-item container-fluid"
-                                    href="https://www.instagram.com/janecadias/" target="_blank"><img
-                                        src="media/image/instagram.svg" alt="instagram"></a>
-                                <a class="dropdown-item  container-fluid"
-                                    href="https://github.com/JoaoDias28"
-                                    target="_blank"><img src="media/image/github.svg" alt="github"></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </footer>
 </body>
 <script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/musica.js"></script>
+<script src="js/general.js"></script>
 <script>
+    addMusic(false);
     // Get the value of the author parameter from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const author = urlParams.get('author');
